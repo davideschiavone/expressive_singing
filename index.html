@@ -3,81 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expressive Singing - Under Construction</title>
+    <title>Expressive Singing | Coming Soon</title>
     <style>
+        :root {
+            --bg-color: #f5eee6; /* Il beige dello sfondo logo */
+            --navy: #1a2238;    /* Il blu scuro del testo */
+            --red: #d1493e;     /* Il rosso del logo */
+            --yellow: #f2b731;  /* Il giallo del logo */
+        }
+
         body {
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f8f9fa;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            background-color: var(--bg-color);
+            color: var(--navy);
             margin: 0;
-            color: #2d3436;
-        }
-        .card {
-            background: white;
-            padding: 3rem;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
             text-align: center;
-            max-width: 500px;
-            border: 1px solid #eee;
+            padding: 20px;
         }
-        .logo-placeholder {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            animation: pulse 2s infinite;
+
+        .lang-switcher {
+            position: absolute;
+            top: 20px;
+            right: 20px;
         }
+
+        button {
+            background: var(--navy);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: opacity 0.3s;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        .logo {
+            max-width: 250px;
+            height: auto;
+            margin-bottom: 30px;
+        }
+
         h1 {
-            font-size: 1.8rem;
-            margin-bottom: 0.5rem;
-            color: #0984e3;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
+
         p {
-            font-size: 1.1rem;
-            color: #636e72;
+            font-size: 1.2rem;
+            max-width: 600px;
             line-height: 1.6;
         }
-        .loader {
-            margin-top: 2rem;
-            height: 4px;
-            width: 100%;
-            background-color: #dfe6e9;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-        .loader-bar {
-            height: 100%;
-            width: 30%;
-            background-color: #0984e3;
-            border-radius: 10px;
-            animation: loading 2s infinite ease-in-out;
+
+        .status-tag {
+            display: inline-block;
+            background: var(--red);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            font-weight: bold;
         }
 
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
-
-        @keyframes loading {
-            0% { margin-left: -30%; }
-            100% { margin-left: 100%; }
-        }
+        [lang="fr"] { display: none; }
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <div class="logo-placeholder">🎙️</div>
-        <h1>Hey, this is Expressive Singing</h1>
-        <p>This website is under construction,<br>please be patient.</p>
-        
-        <div class="loader">
-            <div class="loader-bar"></div>
-        </div>
+    <div class="lang-switcher">
+        <button onclick="toggleLang()" id="langBtn">FR</button>
     </div>
 
+    <img src="logo.png" alt="Expressive Singing Logo" class="logo">
+
+    <div id="en-content" lang="en">
+        <div class="status-tag">UNDER CONSTRUCTION</div>
+        <h1>Expressive Singing</h1>
+        <p>We are currently tuning our voices. Our new platform for expressive vocal art is coming soon.</p>
+    </div>
+
+    <div id="fr-content" lang="fr">
+        <div class="status-tag">EN CONSTRUCTION</div>
+        <h1>Expressive Singing</h1>
+        <p>Nous accordons actuellement nos voix. Notre nouvelle plateforme dédiée all'art vocal expressif arrive bientôt.</p>
+    </div>
+
+    <script>
+        let currentLang = 'en';
+        function toggleLang() {
+            const en = document.getElementById('en-content');
+            const fr = document.getElementById('fr-content');
+            const btn = document.getElementById('langBtn');
+
+            if (currentLang === 'en') {
+                en.style.display = 'none';
+                fr.style.display = 'block';
+                btn.innerText = 'EN';
+                currentLang = 'fr';
+            } else {
+                en.style.display = 'block';
+                fr.style.display = 'none';
+                btn.innerText = 'FR';
+                currentLang = 'en';
+            }
+        }
+    </script>
 </body>
 </html>
