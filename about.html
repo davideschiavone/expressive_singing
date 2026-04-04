@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Expressive Singing</title>
+    <style>
+        :root {
+            --bg-color: #f5eee6; 
+            --navy: #1a2238;    
+            --red: #d1493e;     
+            --yellow: #f2b731;  
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--navy);
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .nav-top {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 50px;
+        }
+
+        .back-link {
+            color: var(--navy);
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.2rem;
+            border-bottom: 3px solid var(--red);
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+            border-bottom: 4px solid var(--yellow);
+        }
+
+        /* Griglia per le 6 persone */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .profile-card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 4px solid var(--bg-color);
+            background-color: #ddd; /* Segnaposto se manca la foto */
+        }
+
+        .name {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin: 10px 0 5px 0;
+            color: var(--red);
+        }
+
+        .role {
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: var(--navy);
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .bio {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        button.lang-btn {
+            background: var(--navy);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        [lang="fr"] { display: none; }
+    </style>
+</head>
+<body>
+
+    <div class="nav-top">
+        <a href="index.html" class="back-link" id="backLink">← Home</a>
+        <button class="lang-btn" onclick="toggleLang()" id="langBtn">FR</button>
+    </div>
+
+    <h1 id="title">Who are we?</h1>
+
+    <div class="team-grid">
+        <div class="profile-card">
+            <img src="https://via.placeholder.com/150" alt="Imane" class="profile-img">
+            <div class="name">Imane El Baladi</div>
+            <div class="role">Artistic Director</div>
+            <p class="bio" data-en="Visionary lead and vocal coach with 10 years of experience in expressive arts." 
+                           data-fr="Directeur artistique visionnaire et coach vocal con 10 ans d'expérience dans les arts expressifs.">
+                Visionary lead and vocal coach with 10 years of experience in expressive arts.
+            </p>
+        </div>
+
+        <div class="profile-card">
+            <img src="https://via.placeholder.com/150" alt="Emma" class="profile-img">
+            <div class="name">Emma Laurent</div>
+            <div class="role">Soprano & Teacher</div>
+            <p class="bio" data-en="Specialized in baroque repertoire and modern vocal techniques." 
+                           data-fr="Spécialisée nel répertoire baroque et les techniques vocales modernes.">
+                Specialized in baroque repertoire and modern vocal techniques.
+            </p>
+        </div>
+
+        <div class="profile-card">
+            <img src="https://via.placeholder.com/150" alt="Marco" class="profile-img">
+            <div class="name">Marco Rossi</div>
+            <div class="role">Pianist</div>
+            <p class="bio" data-en="Expert accompanist for opera singers and contemporary performers." 
+                           data-fr="Accompagnateur expert pour chanteurs d'opéra et interprètes contemporains.">
+                Expert accompanist for opera singers and contemporary performers.
+            </p>
+        </div>
+
+        <div class="profile-card">
+            <img src="https://via.placeholder.com/150" alt="Sophie" class="profile-img">
+            <div class="name">Sophie Dubois</div>
+            <div class="role">Voice Therapist</div>
+            <p class="bio" data-en="Focuses on vocal health and rehabilitation for professional speakers." 
+                           data-fr="Se concentre sulla santé vocale et la réhabilitation per i professionisti della parola.">
+                Focuses on vocal health and rehabilitation for professional speakers.
+            </p>
+        </div>
+
+        <div class="profile-card">
+            <img src="https://via.placeholder.com/150" alt="Luca" class="profile-img">
+            <div class="name">Luca Bianchi</div>
+            <div class="role">Composer</div>
+            <p class="bio" data-en="Creates unique soundscapes for expressive vocal performances." 
+                           data-fr="Crée des paysages sonores uniques per des performances vocales expressives.">
+                Creates unique soundscapes for expressive vocal performances.
+            </p>
+        </div>
+
+        <div class="profile-card">
+            <img src="images/davide.jpeg" alt="Davide" class="profile-img">
+            <div class="name">Davide Schiavone</div>
+            <div class="role">President of the Foundation</div>
+            <p class="bio" data-en="Leads the development of Expressive Singing." 
+                           data-fr="Dirige le développement d’Expressive Singing..">
+                Leads the development of Expressive Singing.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        let currentLang = 'en';
+        function toggleLang() {
+            const btn = document.getElementById('langBtn');
+            const title = document.getElementById('title');
+            const backLink = document.getElementById('backLink');
+            const bios = document.querySelectorAll('.bio');
+            const roles = document.querySelectorAll('.role');
+
+            if (currentLang === 'en') {
+                title.innerText = "Qui sommes-nous ?";
+                backLink.innerText = "← Accueil";
+                btn.innerText = 'EN';
+                bios.forEach(b => b.innerText = b.getAttribute('data-fr'));
+                currentLang = 'fr';
+            } else {
+                title.innerText = "Who are we?";
+                backLink.innerText = "← Home";
+                btn.innerText = 'FR';
+                bios.forEach(b => b.innerText = b.getAttribute('data-en'));
+                currentLang = 'en';
+            }
+        }
+    </script>
+</body>
+</html>

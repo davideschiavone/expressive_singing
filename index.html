@@ -6,10 +6,9 @@
     <title>Expressive Singing | Coming Soon</title>
     <style>
         :root {
-            --bg-color: #f5eee6; /* Il beige dello sfondo logo */
-            --navy: #1a2238;    /* Il blu scuro del testo */
-            --red: #d1493e;     /* Il rosso del logo */
-            --yellow: #f2b731;  /* Il giallo del logo */
+            --bg-color: #f5eee6; 
+            --navy: #1a2238;    
+            --red: #d1493e;     
         }
 
         body {
@@ -26,13 +25,19 @@
             padding: 20px;
         }
 
-        .lang-switcher {
+        .nav-top-left {
             position: absolute;
-            top: 20px;
-            right: 20px;
+            top: 25px;
+            left: 25px;
         }
 
-        button {
+        .lang-switcher {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+        }
+
+        button.lang-btn {
             background: var(--navy);
             color: white;
             border: none;
@@ -40,28 +45,27 @@
             cursor: pointer;
             border-radius: 5px;
             font-weight: bold;
-            transition: opacity 0.3s;
         }
 
-        button:hover {
-            opacity: 0.8;
+        .logo-container {
+            max-width: 300px;
+            margin-bottom: 20px;
         }
 
-        .logo {
-            max-width: 250px;
+        .logo-container img {
+            width: 100%;
             height: auto;
-            margin-bottom: 30px;
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin-bottom: 10px;
             text-transform: uppercase;
             letter-spacing: 2px;
         }
 
         p {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             max-width: 600px;
             line-height: 1.6;
         }
@@ -70,11 +74,21 @@
             display: inline-block;
             background: var(--red);
             color: white;
-            padding: 5px 15px;
+            padding: 6px 18px;
             border-radius: 20px;
-            font-size: 0.9rem;
+            font-size: 1rem;
             margin-bottom: 20px;
             font-weight: bold;
+        }
+
+        .about-link {
+            color: var(--navy);
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.4rem;
+            border-bottom: 3px solid var(--red);
+            padding-bottom: 4px;
+            text-transform: uppercase;
         }
 
         [lang="fr"] { display: none; }
@@ -82,11 +96,17 @@
 </head>
 <body>
 
-    <div class="lang-switcher">
-        <button onclick="toggleLang()" id="langBtn">FR</button>
+    <div class="nav-top-left">
+        <a href="about.html" class="about-link" id="aboutLink">Who are we?</a>
     </div>
 
-    <img src="logo.png" alt="Expressive Singing Logo" class="logo">
+    <div class="lang-switcher">
+        <button class="lang-btn" onclick="toggleLang()" id="langBtn">FR</button>
+    </div>
+
+    <div class="logo-container">
+        <img src="logo.png" alt="Expressive Singing Logo" onerror="this.src='https://raw.githubusercontent.com/davideschiavone/expressive_singing/main/logo.png'">
+    </div>
 
     <div id="en-content" lang="en">
         <div class="status-tag">UNDER CONSTRUCTION</div>
@@ -97,7 +117,7 @@
     <div id="fr-content" lang="fr">
         <div class="status-tag">EN CONSTRUCTION</div>
         <h1>Expressive Singing</h1>
-        <p>Nous accordons actuellement nos voix. Notre nouvelle plateforme dédiée all'art vocal expressif arrive bientôt.</p>
+        <p>Nous accordons actuellement nos voix. Notre nouvelle plateforme dédiée à l'art vocal expressif arrive bientôt.</p>
     </div>
 
     <script>
@@ -106,16 +126,19 @@
             const en = document.getElementById('en-content');
             const fr = document.getElementById('fr-content');
             const btn = document.getElementById('langBtn');
+            const aboutLink = document.getElementById('aboutLink');
 
             if (currentLang === 'en') {
                 en.style.display = 'none';
                 fr.style.display = 'block';
                 btn.innerText = 'EN';
+                aboutLink.innerText = 'Qui sommes-nous ?';
                 currentLang = 'fr';
             } else {
                 en.style.display = 'block';
                 fr.style.display = 'none';
                 btn.innerText = 'FR';
+                aboutLink.innerText = 'Who are we?';
                 currentLang = 'en';
             }
         }
