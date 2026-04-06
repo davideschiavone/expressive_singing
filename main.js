@@ -74,6 +74,16 @@ function initFadeIn() {
   const items = document.querySelectorAll('.fade-in');
   if (!items.length) return;
 
+  // Fallback: ensure everything becomes visible after 400ms regardless
+  setTimeout(() => {
+    items.forEach(el => el.classList.add('visible'));
+  }, 400);
+
+  if (!('IntersectionObserver' in window)) {
+    items.forEach(el => el.classList.add('visible'));
+    return;
+  }
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -81,7 +91,7 @@ function initFadeIn() {
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.12 });
+  }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
 
   items.forEach(el => observer.observe(el));
 }

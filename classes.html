@@ -8,6 +8,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <!-- Language applied immediately before paint to prevent flash -->
+  <script>
+    (function() {
+      var lang = localStorage.getItem('lang') || 'en';
+      document.documentElement.lang = lang;
+      document.documentElement.setAttribute('data-lang', lang);
+    })();
+  </script>
 </head>
 <body>
 
@@ -100,6 +108,24 @@
 
       <div class="class-card">
         <div class="class-card-header">
+          <div class="class-card-icon">🎶</div>
+          <h3 data-en="The Choir" data-fr="Le Chœur">The Choir</h3>
+        </div>
+        <div class="class-card-body">
+          <p data-en="Our community choir is open to all voices — no audition, no experience required. We meet weekly to sing together, explore harmonies and build something greater than any single voice." data-fr="Notre chœur communautaire est ouvert à toutes les voix — sans audition, sans expérience requise. Nous nous réunissons chaque semaine pour chanter ensemble, explorer les harmonies et construire quelque chose de plus grand qu'une seule voix.">
+            Our community choir is open to all voices — no audition, no experience required. We meet weekly to sing together, explore harmonies and build something greater than any single voice.
+          </p>
+          <div class="class-card-meta">
+            <span>⏱ 90 min</span>
+            <span>👥 <span data-en="Open to all" data-fr="Ouvert à tous">Open to all</span></span>
+            <span>💶 CHF 20</span>
+          </div>
+          <a href="contact.html" class="btn btn-primary" data-en="Join the Choir" data-fr="Rejoindre le Chœur">Join the Choir</a>
+        </div>
+      </div>
+
+      <div class="class-card">
+        <div class="class-card-header">
           <div class="class-card-icon">✨</div>
           <h3 data-en="Vocal Journeys" data-fr="Voyages Vocaux">Vocal Journeys</h3>
         </div>
@@ -128,7 +154,7 @@
       </p>
       <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
         <a href="contact.html" class="btn btn-primary" data-en="Contact Us" data-fr="Nous contacter">Contact Us</a>
-        <a href="mailto:info@expressivesingig.ch" class="btn btn-forest" data-en="Send Email" data-fr="Envoyer Email">Send Email</a>
+        <a href="/cdn-cgi/l/email-protection#dcb5b2bab39cb9a4acaeb9afafb5aab9afb5b2bbb5bbf2bfb4" class="btn btn-forest" data-en="Send Email" data-fr="Envoyer Email">Send Email</a>
       </div>
     </div>
   </section>
@@ -165,6 +191,4 @@
     </div>
   </footer>
 
-  <script src="main.js"></script>
-</body>
-</html>
+  <
