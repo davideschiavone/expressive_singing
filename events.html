@@ -8,6 +8,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <!-- Language applied immediately before paint to prevent flash -->
+  <script>
+    (function() {
+      var lang = localStorage.getItem('lang') || 'en';
+      document.documentElement.lang = lang;
+      document.documentElement.setAttribute('data-lang', lang);
+    })();
+  </script>
 </head>
 <body>
 
@@ -34,7 +42,7 @@
     <div class="page-hero-overlay"></div>
     <div class="page-hero-content">
       <p class="section-eyebrow" style="color:var(--gold-lt)" data-en="Upcoming" data-fr="À venir">Upcoming</p>
-      <h1 data-en="📅 Events" data-fr="📅 Événements">📅 Events</h1>
+      <h1 data-en="Events" data-fr="Événements">Events</h1>
       <p data-en="Concerts, workshops and retreats — moments that stay with you." data-fr="Concerts, ateliers et retraites — des moments qui restent en vous.">Concerts, workshops and retreats — moments that stay with you.</p>
     </div>
   </div>

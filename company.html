@@ -8,6 +8,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <!-- Language applied immediately before paint to prevent flash -->
+  <script>
+    (function() {
+      var lang = localStorage.getItem('lang') || 'en';
+      document.documentElement.lang = lang;
+      document.documentElement.setAttribute('data-lang', lang);
+    })();
+  </script>
 </head>
 <body>
 
@@ -34,7 +42,7 @@
     <div class="page-hero-overlay"></div>
     <div class="page-hero-content">
       <p class="section-eyebrow" style="color:var(--gold-lt)" data-en="Artistic · Professional" data-fr="Artistique · Professionnel">Artistic · Professional</p>
-      <h1 data-en="🎭 The Company" data-fr="🎭 La Compagnie">🎭 The Company</h1>
+      <h1 data-en="The Company" data-fr="La Compagnie">The Company</h1>
       <p data-en="Professional vocal performances rooted in emotion, story and the transformative power of the human voice." data-fr="Performances vocales professionnelles ancrées dans l'émotion, le récit et le pouvoir transformateur de la voix humaine.">Professional vocal performances rooted in emotion, story and the transformative power of the human voice.</p>
     </div>
   </div>

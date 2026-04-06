@@ -8,6 +8,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <!-- Language applied immediately before paint to prevent flash -->
+  <script>
+    (function() {
+      var lang = localStorage.getItem('lang') || 'en';
+      document.documentElement.lang = lang;
+      document.documentElement.setAttribute('data-lang', lang);
+    })();
+  </script>
 </head>
 <body>
 
@@ -34,7 +42,7 @@
     <div class="page-hero-overlay"></div>
     <div class="page-hero-content">
       <p class="section-eyebrow" style="color:var(--gold-lt)" data-en="Immersive experiences" data-fr="Expériences immersives">Immersive experiences</p>
-      <h1 data-en="🌊 Retreats" data-fr="🌊 Retraites">🌊 Retreats</h1>
+      <h1 data-en="Retreats" data-fr="Retraites">Retreats</h1>
       <p data-en="Step away from daily life and immerse yourself in voice, nature and inner silence." data-fr="Éloignez-vous du quotidien et plongez dans la voix, la nature et le silence intérieur.">Step away from daily life and immerse yourself in voice, nature and inner silence.</p>
     </div>
   </div>

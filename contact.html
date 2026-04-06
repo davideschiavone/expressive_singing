@@ -8,6 +8,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <!-- Language applied immediately before paint to prevent flash -->
+  <script>
+    (function() {
+      var lang = localStorage.getItem('lang') || 'en';
+      document.documentElement.lang = lang;
+      document.documentElement.setAttribute('data-lang', lang);
+    })();
+  </script>
 </head>
 <body>
 
@@ -34,7 +42,7 @@
     <div class="page-hero-overlay"></div>
     <div class="page-hero-content">
       <p class="section-eyebrow" style="color:var(--gold-lt)" data-en="Get in touch" data-fr="Contactez-nous">Get in touch</p>
-      <h1 data-en="📩 Contact" data-fr="📩 Contact">📩 Contact</h1>
+      <h1 data-en="Contact" data-fr="Contact">Contact</h1>
     </div>
   </div>
 
@@ -51,7 +59,7 @@
           <div class="contact-detail-icon">✉️</div>
           <div>
             <p><strong>Email</strong></p>
-            <p><a href="mailto:info@expressivesingig.ch" style="color:var(--gold);">info@expressivesinging.ch</a></p>
+            <p><a href="/cdn-cgi/l/email-protection#c7aea9a1a887a2bfb7b5a2b4b4aeb1a2b4aea9a0aea0e9a4af" style="color:var(--gold);"><span class="__cf_email__" data-cfemail="d5bcbbb3ba95b0ada5a7b0a6a6bca3b0a6bcbbb2bcbbb2fbb6bd">[email&#160;protected]</span></a></p>
           </div>
         </div>
 
@@ -161,18 +169,10 @@
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="main.js"></script>
   <script>
     // Update textarea placeholders on lang change
     const origToggle = window.toggleLang;
     window.toggleLang = function() {
       origToggle();
-      const ta = document.querySelector('textarea[data-placeholder-en]');
-      if (ta) {
-        const lang = localStorage.getItem('lang') || 'en';
-        ta.placeholder = lang === 'fr' ? ta.getAttribute('data-placeholder-fr') : ta.getAttribute('data-placeholder-en');
-      }
-    };
-  </script>
-</body>
-</html>
+      const ta = document.querySelector('textarea[data-place
