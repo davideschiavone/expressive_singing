@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Association | Expressive Singing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="nav" id="mainNav">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.png" alt="Expressive Singing" onerror="this.style.display='none'; this.nextSibling.style.display='block'">
+      <span class="nav-logo-text" style="display:none">Expressive Singing</span>
+    </a>
+    <button class="nav-hamburger" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="navLinks">
+      <a href="association.html" class="nav-link" data-en="Association" data-fr="Association">Association</a>
+      <a href="company.html" class="nav-link" data-en="Company" data-fr="Compagnie">Company</a>
+      <a href="classes.html" class="nav-link" data-en="Classes" data-fr="Cours">Classes</a>
+      <a href="events.html" class="nav-link" data-en="Events" data-fr="Événements">Events</a>
+      <a href="retreats.html" class="nav-link" data-en="Retreats" data-fr="Retraites">Retreats</a>
+      <a href="blog.html" class="nav-link" data-en="Blog" data-fr="Blog">Blog</a>
+      <a href="contact.html" class="nav-link" data-en="Contact" data-fr="Contact">Contact</a>
+      <button class="lang-btn" id="langBtn" onclick="toggleLang()">FR</button>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?w=1600&q=80')"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <p class="section-eyebrow" style="color:var(--gold-lt)" data-en="Non-profit · Geneva" data-fr="À but non lucratif · Genève">Non-profit · Geneva</p>
+      <h1 data-en="🌿 The Association" data-fr="🌿 L'Association">🌿 The Association</h1>
+      <p data-en="A community united by the belief that every voice deserves to be heard." data-fr="Une communauté unie par la conviction que chaque voix mérite d'être entendue.">A community united by the belief that every voice deserves to be heard.</p>
+    </div>
+  </div>
+
+  <!-- MISSION -->
+  <section class="content-section">
+    <div class="two-col fade-in">
+      <div class="two-col-text">
+        <p class="section-eyebrow" data-en="Article 3 & 5" data-fr="Articles 3 & 5">Article 3 & 5</p>
+        <h2 data-en="Our Mission" data-fr="Notre Mission">Our Mission</h2>
+        <p data-en="Expressive Singing Association exists to cultivate vocal expression as a universal language of connection, healing and creativity. We believe that the act of singing is inherently human — a birthright that transcends age, background and ability." data-fr="L'Association Expressive Singing existe pour cultiver l'expression vocale comme langage universel de connexion, de guérison et de créativité. Nous croyons que le chant est fondamentalement humain — un droit de naissance qui transcende l'âge, les origines et les capacités.">
+          Expressive Singing Association exists to cultivate vocal expression as a universal language of connection, healing and creativity. We believe that the act of singing is inherently human — a birthright that transcends age, background and ability.
+        </p>
+        <p data-en="Through workshops, community gatherings and educational programmes, we create safe, joyful spaces where voices are freed, stories are shared, and personal transformation becomes possible." data-fr="À travers des ateliers, des rassemblements communautaires et des programmes éducatifs, nous créons des espaces sûrs et joyeux où les voix se libèrent, les histoires se partagent et la transformation personnelle devient possible.">
+          Through workshops, community gatherings and educational programmes, we create safe, joyful spaces where voices are freed, stories are shared, and personal transformation becomes possible.
+        </p>
+      </div>
+      <div class="two-col-img">
+        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80" alt="Community singing">
+      </div>
+    </div>
+
+    <!-- VALUES -->
+    <div style="margin-top: 80px;" class="fade-in">
+      <p class="section-eyebrow" data-en="What guides us" data-fr="Ce qui nous guide">What guides us</p>
+      <h2 class="section-title" data-en="Our Values" data-fr="Nos Valeurs">Our Values</h2>
+      <div class="values-grid">
+        <div class="value-card">
+          <h4 data-en="Vocal Expression" data-fr="Expression Vocale">Vocal Expression</h4>
+          <p data-en="We honor the unique power of each individual voice as a vehicle for truth and emotion." data-fr="Nous honorons le pouvoir unique de chaque voix individuelle comme vecteur de vérité et d'émotion.">We honor the unique power of each individual voice as a vehicle for truth and emotion.</p>
+        </div>
+        <div class="value-card">
+          <h4 data-en="Creativity" data-fr="Créativité">Creativity</h4>
+          <p data-en="We nurture artistic curiosity and encourage exploration beyond boundaries." data-fr="Nous nourrissons la curiosité artistique et encourageons l'exploration au-delà des frontières.">We nurture artistic curiosity and encourage exploration beyond boundaries.</p>
+        </div>
+        <div class="value-card">
+          <h4 data-en="Inclusion" data-fr="Inclusion">Inclusion</h4>
+          <p data-en="Our doors are open to all. Diversity of voice, culture and experience enriches us." data-fr="Nos portes sont ouvertes à tous. La diversité des voix, des cultures et des expériences nous enrichit.">Our doors are open to all. Diversity of voice, culture and experience enriches us.</p>
+        </div>
+        <div class="value-card">
+          <h4 data-en="Personal Development" data-fr="Développement Personnel">Personal Development</h4>
+          <p data-en="We create pathways for inner growth through the transformative practice of singing." data-fr="Nous créons des voies de croissance intérieure à travers la pratique transformatrice du chant.">We create pathways for inner growth through the transformative practice of singing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACTIVITIES -->
+  <section class="content-section content-section--alt fade-in">
+    <p class="section-eyebrow" data-en="Article 4" data-fr="Article 4">Article 4</p>
+    <h2 class="section-title" data-en="Our Activities" data-fr="Nos Activités">Our Activities</h2>
+    <div class="activities-grid">
+      <div class="activity-card">
+        <div class="activity-icon">🎵</div>
+        <h4 data-en="Vocal Workshops" data-fr="Ateliers Vocaux">Vocal Workshops</h4>
+        <p data-en="Regular group workshops exploring different vocal traditions, breathing techniques and expressive methods." data-fr="Ateliers de groupe réguliers explorant différentes traditions vocales, techniques de respiration et méthodes expressives.">Regular group workshops exploring different vocal traditions, breathing techniques and expressive methods.</p>
+      </div>
+      <div class="activity-card">
+        <div class="activity-icon">🌊</div>
+        <h4 data-en="Sound & Wellbeing" data-fr="Son & Bien-être">Sound & Wellbeing</h4>
+        <p data-en="Sound meditation, voice baths and somatic practices connecting voice to body and mind." data-fr="Méditation sonore, bains de voix et pratiques somatiques reliant voix, corps et esprit.">Sound meditation, voice baths and somatic practices connecting voice to body and mind.</p>
+      </div>
+      <div class="activity-card">
+        <div class="activity-icon">🏫</div>
+        <h4 data-en="Social & Educational Actions" data-fr="Actions Sociales & Éducatives">Social & Educational Actions</h4>
+        <p data-en="Partnerships with schools and social organisations to bring expressive singing to underserved communities." data-fr="Partenariats avec des écoles et organisations sociales pour apporter le chant expressif aux communautés défavorisées.">Partnerships with schools and social organisations to bring expressive singing to underserved communities.</p>
+      </div>
+      <div class="activity-card">
+        <div class="activity-icon">🎭</div>
+        <h4 data-en="Cultural Events" data-fr="Événements Culturels">Cultural Events</h4>
+        <p data-en="Open mics, community concerts and collaborative performances celebrating the breadth of vocal art." data-fr="Open mics, concerts communautaires et performances collaboratives célébrant la richesse de l'art vocal.">Open mics, community concerts and collaborative performances celebrating the breadth of vocal art.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEMBERSHIP -->
+  <section id="membership" class="content-section fade-in" style="background: var(--forest); color: white;">
+    <div style="text-align:center; max-width: var(--max-w); margin: 0 auto;">
+      <p class="section-eyebrow" style="color:var(--gold-lt)" data-en="Articles 7–9" data-fr="Articles 7–9">Articles 7–9</p>
+      <h2 class="section-title" style="color:white; margin-bottom: 16px;" data-en="Become a Member" data-fr="Devenir Membre">Become a Member</h2>
+      <p style="color:rgba(255,255,255,0.7); margin-bottom: 56px; font-size:1.05rem;" data-en="Join a growing community of voices. Your membership directly supports our mission." data-fr="Rejoignez une communauté de voix grandissante. Votre adhésion soutient directement notre mission.">
+        Join a growing community of voices. Your membership directly supports our mission.
+      </p>
+      <div class="membership-grid">
+        <div class="membership-card">
+          <h3 data-en="Passive Member" data-fr="Membre Passif">Passive Member</h3>
+          <p style="color:var(--muted); font-size:0.9rem;" data-en="Support from a distance" data-fr="Soutien à distance">Support from a distance</p>
+          <div class="membership-price">CHF 30<span data-en="/year" data-fr="/an">/year</span></div>
+          <ul>
+            <li data-en="Support the association" data-fr="Soutenir l'association">Support the association</li>
+            <li data-en="Newsletter & updates" data-fr="Newsletter & actualités">Newsletter & updates</li>
+            <li data-en="Priority event access" data-fr="Accès prioritaire aux événements">Priority event access</li>
+          </ul>
+          <a href="contact.html" class="btn btn-outline" style="border-color:var(--gold); color:var(--gold);" data-en="Join Now" data-fr="Adhérer">Join Now</a>
+        </div>
+        <div class="membership-card featured" style="background:var(--cream);">
+          <h3 style="color:var(--forest);" data-en="Active Member" data-fr="Membre Actif">Active Member</h3>
+          <p style="color:var(--muted); font-size:0.9rem;" data-en="Full participation" data-fr="Participation complète">Full participation</p>
+          <div class="membership-price">CHF 60<span data-en="/year" data-fr="/an">/year</span></div>
+          <ul>
+            <li data-en="All Passive benefits" data-fr="Tous les avantages Passif">All Passive benefits</li>
+            <li data-en="Vote at General Assembly" data-fr="Vote à l'Assemblée Générale">Vote at General Assembly</li>
+            <li data-en="Reduced workshop fees" data-fr="Tarifs réduits aux ateliers">Reduced workshop fees</li>
+            <li data-en="Community access" data-fr="Accès communauté">Community access</li>
+          </ul>
+          <a href="contact.html" class="btn btn-gold" data-en="Join Now" data-fr="Adhérer">Join Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRANSPARENCY -->
+  <section id="statutes" class="content-section fade-in">
+    <p class="section-eyebrow" data-en="Swiss non-profit" data-fr="Association suisse">Swiss non-profit</p>
+    <h2 class="section-title" data-en="Transparency" data-fr="Transparence">Transparency</h2>
+    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:24px; max-width:900px;">
+      <div class="value-card" style="text-align:center;">
+        <div style="font-size:2.5rem; margin-bottom:12px;">📄</div>
+        <h4 data-en="Statutes" data-fr="Statuts">Statutes</h4>
+        <p data-en="Download our founding statutes (PDF)" data-fr="Télécharger nos statuts fondateurs (PDF)">Download our founding statutes (PDF)</p>
+        <br>
+        <a href="#" class="btn btn-forest" style="font-size:0.82rem; padding:10px 20px;" data-en="Download PDF" data-fr="Télécharger PDF">Download PDF</a>
+      </div>
+      <div class="value-card" style="text-align:center;">
+        <div style="font-size:2.5rem; margin-bottom:12px;">👥</div>
+        <h4 data-en="Committee" data-fr="Comité">Committee</h4>
+        <p data-en="Meet our volunteer board members" data-fr="Rencontrez nos membres bénévoles du comité">Meet our volunteer board members</p>
+        <br>
+        <a href="company.html#team" class="btn btn-forest" style="font-size:0.82rem; padding:10px 20px;" data-en="Meet the Team" data-fr="Rencontrer l'équipe">Meet the Team</a>
+      </div>
+      <div class="value-card" style="text-align:center;">
+        <div style="font-size:2.5rem; margin-bottom:12px;">📊</div>
+        <h4 data-en="Activity Reports" data-fr="Rapports d'Activité">Activity Reports</h4>
+        <p data-en="Annual reports on our activities and finances" data-fr="Rapports annuels sur nos activités et finances">Annual reports on our activities and finances</p>
+        <br>
+        <a href="contact.html" class="btn btn-forest" style="font-size:0.82rem; padding:10px 20px;" data-en="Request Report" data-fr="Demander un Rapport">Request Report</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <p class="footer-logo-text">Expressive Singing</p>
+        <p class="footer-tagline" data-en="Voice. Expression. Transformation." data-fr="Voix. Expression. Transformation.">Voice. Expression. Transformation.</p>
+      </div>
+      <div class="footer-links-group">
+        <p class="footer-group-title" data-en="Explore" data-fr="Explorer">Explore</p>
+        <a href="association.html" data-en="Association" data-fr="Association">Association</a>
+        <a href="company.html" data-en="Company" data-fr="Compagnie">Company</a>
+        <a href="classes.html" data-en="Classes" data-fr="Cours">Classes</a>
+        <a href="events.html" data-en="Events" data-fr="Événements">Events</a>
+      </div>
+      <div class="footer-links-group">
+        <p class="footer-group-title" data-en="Connect" data-fr="Se connecter">Connect</p>
+        <a href="retreats.html" data-en="Retreats" data-fr="Retraites">Retreats</a>
+        <a href="blog.html" data-en="Blog" data-fr="Blog">Blog</a>
+        <a href="contact.html" data-en="Contact" data-fr="Contact">Contact</a>
+        <a href="#statutes" data-en="Statutes" data-fr="Statuts">Statutes</a>
+      </div>
+      <div class="footer-social">
+        <p class="footer-group-title">Social</p>
+        <div class="footer-social-links">
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Expressive Singing · Geneva, Switzerland</p>
+      <p data-en="Crafted with ♥ for the voice" data-fr="Créé avec ♥ pour la voix">Crafted with ♥ for the voice</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

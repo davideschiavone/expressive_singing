@@ -1,147 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expressive Singing | Coming Soon</title>
-    <style>
-        :root {
-            --bg-color: #f5eee6; 
-            --navy: #1a2238;    
-            --red: #d1493e;     
-        }
-
-        body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--navy);
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .nav-top-left {
-            position: absolute;
-            top: 25px;
-            left: 25px;
-        }
-
-        .lang-switcher {
-            position: absolute;
-            top: 25px;
-            right: 25px;
-        }
-
-        button.lang-btn {
-            background: var(--navy);
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-
-        .logo-container {
-            max-width: 300px;
-            margin-bottom: 20px;
-        }
-
-        .logo-container img {
-            width: 100%;
-            height: auto;
-        }
-
-        h1 {
-            font-size: 2.8rem;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        p {
-            font-size: 1.3rem;
-            max-width: 600px;
-            line-height: 1.6;
-        }
-
-        .status-tag {
-            display: inline-block;
-            background: var(--red);
-            color: white;
-            padding: 6px 18px;
-            border-radius: 20px;
-            font-size: 1rem;
-            margin-bottom: 20px;
-            font-weight: bold;
-        }
-
-        .about-link {
-            color: var(--navy);
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 1.4rem;
-            border-bottom: 3px solid var(--red);
-            padding-bottom: 4px;
-            text-transform: uppercase;
-        }
-
-        [lang="fr"] { display: none; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expressive Singing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="nav-top-left">
-        <a href="about.html" class="about-link" id="aboutLink">Who are we?</a>
+  <!-- NAVIGATION -->
+  <nav class="nav" id="mainNav">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.png" alt="Expressive Singing" onerror="this.style.display='none'; this.nextSibling.style.display='block'">
+      <span class="nav-logo-text" style="display:none">Expressive Singing</span>
+    </a>
+    <button class="nav-hamburger" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="association.html" class="nav-link" data-en="Association" data-fr="Association">Association</a>
+      <a href="company.html" class="nav-link" data-en="Company" data-fr="Compagnie">Company</a>
+      <a href="classes.html" class="nav-link" data-en="Classes" data-fr="Cours">Classes</a>
+      <a href="events.html" class="nav-link" data-en="Events" data-fr="Événements">Events</a>
+      <a href="retreats.html" class="nav-link" data-en="Retreats" data-fr="Retraites">Retreats</a>
+      <a href="blog.html" class="nav-link" data-en="Blog" data-fr="Blog">Blog</a>
+      <a href="contact.html" class="nav-link" data-en="Contact" data-fr="Contact">Contact</a>
+      <button class="lang-btn" id="langBtn" onclick="toggleLang()">FR</button>
     </div>
+  </nav>
 
-    <div class="lang-switcher">
-        <button class="lang-btn" onclick="toggleLang()" id="langBtn">FR</button>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-overlay"></div>
     </div>
-
-    <div class="logo-container">
-        <img src="logo.png" alt="Expressive Singing Logo" onerror="this.src='https://raw.githubusercontent.com/davideschiavone/expressive_singing/main/logo.png'">
+    <div class="hero-content">
+      <p class="hero-eyebrow" data-en="Geneva · Switzerland" data-fr="Genève · Suisse">Geneva · Switzerland</p>
+      <h1 class="hero-title">
+        <span class="hero-title-line" data-en="Your Voice." data-fr="Votre Voix.">Your Voice.</span>
+        <span class="hero-title-line italic" data-en="Your Story." data-fr="Votre Histoire.">Your Story.</span>
+        <span class="hero-title-line" data-en="Your Power." data-fr="Votre Pouvoir.">Your Power.</span>
+      </h1>
+      <p class="hero-sub" data-en="Where vocal art meets personal transformation." data-fr="Là où l'art vocal rencontre la transformation personnelle.">
+        Where vocal art meets personal transformation.
+      </p>
+      <div class="hero-ctas">
+        <a href="classes.html" class="btn btn-primary" data-en="Book a Class" data-fr="Réserver un Cours">Book a Class</a>
+        <a href="events.html" class="btn btn-outline" data-en="Explore Events" data-fr="Voir les Événements">Explore Events</a>
+      </div>
     </div>
-
-    <div id="en-content" lang="en">
-        <div class="status-tag">UNDER CONSTRUCTION</div>
-        <h1>Expressive Singing</h1>
-        <p>We are currently tuning our voices. Our new platform for expressive vocal art is coming soon.</p>
+    <div class="hero-scroll-indicator">
+      <span></span>
     </div>
+  </section>
 
-    <div id="fr-content" lang="fr">
-        <div class="status-tag">EN CONSTRUCTION</div>
-        <h1>Expressive Singing</h1>
-        <p>Nous accordons actuellement nos voix. Notre nouvelle plateforme dédiée à l'art vocal expressif arrive bientôt.</p>
+  <!-- TWO ENTITIES -->
+  <section class="entities">
+    <div class="entities-intro">
+      <p class="section-eyebrow" data-en="Two worlds, one voice" data-fr="Deux mondes, une voix">Two worlds, one voice</p>
+      <h2 class="section-title" data-en="Who We Are" data-fr="Qui Nous Sommes">Who We Are</h2>
     </div>
+    <div class="entities-grid">
+      <a href="association.html" class="entity-card entity-card--association">
+        <div class="entity-card-icon">🌿</div>
+        <h3 class="entity-card-title" data-en="The Association" data-fr="L'Association">The Association</h3>
+        <p class="entity-card-desc" data-en="A non-profit community rooted in vocal expression, inclusion and personal growth through sound." data-fr="Une communauté à but non lucratif ancrée dans l'expression vocale, l'inclusion et la croissance personnelle par le son.">
+          A non-profit community rooted in vocal expression, inclusion and personal growth through sound.
+        </p>
+        <div class="entity-card-tags">
+          <span data-en="Workshops" data-fr="Ateliers">Workshops</span>
+          <span data-en="Membership" data-fr="Adhésion">Membership</span>
+          <span data-en="Community" data-fr="Communauté">Community</span>
+        </div>
+        <span class="entity-card-cta" data-en="Discover →" data-fr="Découvrir →">Discover →</span>
+      </a>
+      <a href="company.html" class="entity-card entity-card--company">
+        <div class="entity-card-icon">🎭</div>
+        <h3 class="entity-card-title" data-en="The Company" data-fr="La Compagnie">The Company</h3>
+        <p class="entity-card-desc" data-en="A professional artistic ensemble creating powerful vocal performances, productions and teaching." data-fr="Un ensemble artistique professionnel créant des performances vocales, des productions et un enseignement de haut niveau.">
+          A professional artistic ensemble creating powerful vocal performances, productions and teaching.
+        </p>
+        <div class="entity-card-tags">
+          <span data-en="Performances" data-fr="Spectacles">Performances</span>
+          <span data-en="Teaching" data-fr="Enseignement">Teaching</span>
+          <span data-en="Creation" data-fr="Création">Creation</span>
+        </div>
+        <span class="entity-card-cta" data-en="Explore →" data-fr="Explorer →">Explore →</span>
+      </a>
+    </div>
+  </section>
 
-    <script>
-        let currentLang = 'en';
-        function toggleLang() {
-            const en = document.getElementById('en-content');
-            const fr = document.getElementById('fr-content');
-            const btn = document.getElementById('langBtn');
-            const aboutLink = document.getElementById('aboutLink');
+  <!-- FEATURED QUOTE -->
+  <section class="quote-section">
+    <blockquote class="big-quote">
+      <span class="quote-mark">"</span>
+      <p data-en="The voice is not just sound — it is the most intimate expression of who you are." data-fr="La voix n'est pas seulement du son — c'est l'expression la plus intime de ce que vous êtes.">
+        The voice is not just sound — it is the most intimate expression of who you are.
+      </p>
+    </blockquote>
+  </section>
 
-            if (currentLang === 'en') {
-                en.style.display = 'none';
-                fr.style.display = 'block';
-                btn.innerText = 'EN';
-                aboutLink.innerText = 'Qui sommes-nous ?';
-                currentLang = 'fr';
-            } else {
-                en.style.display = 'block';
-                fr.style.display = 'none';
-                btn.innerText = 'FR';
-                aboutLink.innerText = 'Who are we?';
-                currentLang = 'en';
-            }
-        }
-    </script>
+  <!-- ACTIVITIES STRIP -->
+  <section class="activities">
+    <p class="section-eyebrow" data-en="What we offer" data-fr="Ce que nous offrons">What we offer</p>
+    <h2 class="section-title" data-en="Find Your Practice" data-fr="Trouvez Votre Pratique">Find Your Practice</h2>
+    <div class="activities-grid">
+      <div class="activity-card">
+        <div class="activity-icon">🎤</div>
+        <h4 data-en="Private Lessons" data-fr="Cours Privés">Private Lessons</h4>
+        <p data-en="One-on-one sessions tailored to your voice and goals." data-fr="Séances individuelles adaptées à votre voix et vos objectifs.">One-on-one sessions tailored to your voice and goals.</p>
+        <a href="classes.html" class="text-link" data-en="Book →" data-fr="Réserver →">Book →</a>
+      </div>
+      <div class="activity-card">
+        <div class="activity-icon">🎵</div>
+        <h4 data-en="Group Classes" data-fr="Cours Collectifs">Group Classes</h4>
+        <p data-en="Sing together, grow together. All levels welcome." data-fr="Chantez ensemble, grandissez ensemble. Tous niveaux bienvenus.">Sing together, grow together. All levels welcome.</p>
+        <a href="classes.html" class="text-link" data-en="Explore →" data-fr="Explorer →">Explore →</a>
+      </div>
+      <div class="activity-card">
+        <div class="activity-icon">🌊</div>
+        <h4 data-en="Retreats" data-fr="Retraites">Retreats</h4>
+        <p data-en="Immersive voice, yoga and meditation experiences." data-fr="Expériences immersives voix, yoga et méditation.">Immersive voice, yoga and meditation experiences.</p>
+        <a href="retreats.html" class="text-link" data-en="Discover →" data-fr="Découvrir →">Discover →</a>
+      </div>
+      <div class="activity-card">
+        <div class="activity-icon">🎭</div>
+        <h4 data-en="Performances" data-fr="Spectacles">Performances</h4>
+        <p data-en="Live shows that move, inspire and transform audiences." data-fr="Spectacles vivants qui émeuvent, inspirent et transforment le public.">Live shows that move, inspire and transform audiences.</p>
+        <a href="company.html" class="text-link" data-en="See shows →" data-fr="Voir les spectacles →">See shows →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEXT EVENT BANNER -->
+  <section class="next-event">
+    <div class="next-event-content">
+      <p class="section-eyebrow" data-en="Coming up" data-fr="Prochainement">Coming up</p>
+      <h2 data-en="Soundtrack — Next Performance" data-fr="Soundtrack — Prochaine Représentation">Soundtrack — Next Performance</h2>
+      <p data-en="An intimate journey through voice, music and emotion. Reserve your seat now." data-fr="Un voyage intime à travers la voix, la musique et l'émotion. Réservez votre place maintenant.">
+        An intimate journey through voice, music and emotion. Reserve your seat now.
+      </p>
+      <a href="events.html" class="btn btn-primary" data-en="See all events" data-fr="Voir tous les événements">See all events</a>
+    </div>
+  </section>
+
+  <!-- BECOME A MEMBER CTA -->
+  <section class="member-cta">
+    <div class="member-cta-inner">
+      <div>
+        <p class="section-eyebrow" data-en="Join the community" data-fr="Rejoignez la communauté">Join the community</p>
+        <h2 data-en="Become a Member" data-fr="Devenez Membre">Become a Member</h2>
+        <p data-en="Support our mission and enjoy exclusive access to events, workshops and a passionate community of voices." data-fr="Soutenez notre mission et bénéficiez d'un accès exclusif aux événements, ateliers et à une communauté passionnée de voix.">
+          Support our mission and enjoy exclusive access to events, workshops and a passionate community of voices.
+        </p>
+      </div>
+      <a href="association.html#membership" class="btn btn-gold" data-en="Join Now" data-fr="Adhérer">Join Now</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <p class="footer-logo-text">Expressive Singing</p>
+        <p class="footer-tagline" data-en="Voice. Expression. Transformation." data-fr="Voix. Expression. Transformation.">Voice. Expression. Transformation.</p>
+      </div>
+      <div class="footer-links-group">
+        <p class="footer-group-title" data-en="Explore" data-fr="Explorer">Explore</p>
+        <a href="association.html" data-en="Association" data-fr="Association">Association</a>
+        <a href="company.html" data-en="Company" data-fr="Compagnie">Company</a>
+        <a href="classes.html" data-en="Classes" data-fr="Cours">Classes</a>
+        <a href="events.html" data-en="Events" data-fr="Événements">Events</a>
+      </div>
+      <div class="footer-links-group">
+        <p class="footer-group-title" data-en="Connect" data-fr="Se connecter">Connect</p>
+        <a href="retreats.html" data-en="Retreats" data-fr="Retraites">Retreats</a>
+        <a href="blog.html" data-en="Blog" data-fr="Blog">Blog</a>
+        <a href="contact.html" data-en="Contact" data-fr="Contact">Contact</a>
+        <a href="association.html#statutes" data-en="Statutes" data-fr="Statuts">Statutes</a>
+      </div>
+      <div class="footer-social">
+        <p class="footer-group-title">Social</p>
+        <div class="footer-social-links">
+          <a href="#" aria-label="Instagram">Instagram</a>
+          <a href="#" aria-label="Facebook">Facebook</a>
+          <a href="#" aria-label="YouTube">YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Expressive Singing · Geneva, Switzerland</p>
+      <p data-en="Crafted with ♥ for the voice" data-fr="Créé avec ♥ pour la voix">Crafted with ♥ for the voice</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>

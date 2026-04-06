@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retreats | Expressive Singing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="nav" id="mainNav">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.png" alt="Expressive Singing" onerror="this.style.display='none'; this.nextSibling.style.display='block'">
+      <span class="nav-logo-text" style="display:none">Expressive Singing</span>
+    </a>
+    <button class="nav-hamburger" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="navLinks">
+      <a href="association.html" class="nav-link" data-en="Association" data-fr="Association">Association</a>
+      <a href="company.html" class="nav-link" data-en="Company" data-fr="Compagnie">Company</a>
+      <a href="classes.html" class="nav-link" data-en="Classes" data-fr="Cours">Classes</a>
+      <a href="events.html" class="nav-link" data-en="Events" data-fr="Événements">Events</a>
+      <a href="retreats.html" class="nav-link" data-en="Retreats" data-fr="Retraites">Retreats</a>
+      <a href="blog.html" class="nav-link" data-en="Blog" data-fr="Blog">Blog</a>
+      <a href="contact.html" class="nav-link" data-en="Contact" data-fr="Contact">Contact</a>
+      <button class="lang-btn" id="langBtn" onclick="toggleLang()">FR</button>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1600&q=80')"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <p class="section-eyebrow" style="color:var(--gold-lt)" data-en="Immersive experiences" data-fr="Expériences immersives">Immersive experiences</p>
+      <h1 data-en="🌊 Retreats" data-fr="🌊 Retraites">🌊 Retreats</h1>
+      <p data-en="Step away from daily life and immerse yourself in voice, nature and inner silence." data-fr="Éloignez-vous du quotidien et plongez dans la voix, la nature et le silence intérieur.">Step away from daily life and immerse yourself in voice, nature and inner silence.</p>
+    </div>
+  </div>
+
+  <section class="content-section fade-in">
+    <div class="two-col">
+      <div class="two-col-text">
+        <p class="section-eyebrow" data-en="Why a retreat?" data-fr="Pourquoi une retraite ?">Why a retreat?</p>
+        <h2 data-en="Your Voice Needs Space" data-fr="Votre Voix A Besoin d'Espace">Your Voice Needs Space</h2>
+        <p data-en="We live in a noisy world. We speak constantly but rarely truly express ourselves. Our retreats create the conditions for something rare: genuine vocal and personal liberation." data-fr="Nous vivons dans un monde bruyant. Nous parlons constamment mais nous nous exprimons rarement vraiment. Nos retraites créent les conditions pour quelque chose de rare : une véritable libération vocale et personnelle.">
+          We live in a noisy world. We speak constantly but rarely truly express ourselves. Our retreats create the conditions for something rare: genuine vocal and personal liberation.
+        </p>
+        <p data-en="Each retreat combines guided vocal sessions, yoga, meditation and shared meals — all in a beautiful natural setting. Designed for beginners and experienced singers alike." data-fr="Chaque retraite combine des séances vocales guidées, du yoga, de la méditation et des repas partagés — le tout dans un beau cadre naturel. Conçu pour les débutants et les chanteurs expérimentés.">
+          Each retreat combines guided vocal sessions, yoga, meditation and shared meals — all in a beautiful natural setting. Designed for beginners and experienced singers alike.
+        </p>
+      </div>
+      <div class="two-col-img">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80" alt="Retreat landscape">
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section content-section--alt fade-in">
+    <p class="section-eyebrow" data-en="Next retreat" data-fr="Prochaine retraite">Next retreat</p>
+    <h2 class="section-title" data-en="Summer Vocal Retreat 2025" data-fr="Retraite Vocale d'Été 2025">Summer Vocal Retreat 2025</h2>
+    <div style="display:grid; grid-template-columns: 1.2fr 1fr; gap:60px; align-items:start; max-width:960px;">
+      <div>
+        <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&q=80" style="border-radius:12px; width:100%; aspect-ratio:4/3; object-fit:cover;" alt="Jura Mountains">
+        <p style="font-size:0.82rem; color:var(--muted); margin-top:8px;" data-en="Jura Mountains, Switzerland" data-fr="Montagnes du Jura, Suisse">Jura Mountains, Switzerland</p>
+      </div>
+      <div>
+        <div style="display:flex; flex-direction:column; gap:16px; margin-bottom:28px;">
+          <div class="value-card" style="padding:20px 24px;">
+            <h4 data-en="📅 Dates" data-fr="📅 Dates">📅 Dates</h4>
+            <p>19–21 July 2025</p>
+          </div>
+          <div class="value-card" style="padding:20px 24px;">
+            <h4 data-en="📍 Location" data-fr="📍 Lieu">📍 Location</h4>
+            <p data-en="Jura Mountains, Switzerland (1h from Geneva)" data-fr="Montagnes du Jura, Suisse (1h de Genève)">Jura Mountains, Switzerland (1h from Geneva)</p>
+          </div>
+          <div class="value-card" style="padding:20px 24px;">
+            <h4 data-en="👥 Capacity" data-fr="👥 Capacité">👥 Capacity</h4>
+            <p data-en="12 participants · All levels" data-fr="12 participants · Tous niveaux">12 participants · All levels</p>
+          </div>
+          <div class="value-card" style="padding:20px 24px;">
+            <h4 data-en="💶 Investment" data-fr="💶 Investissement">💶 Investment</h4>
+            <p data-en="CHF 490 — includes accommodation, meals, all sessions" data-fr="CHF 490 — hébergement, repas, toutes séances inclus">CHF 490 — includes accommodation, meals, all sessions</p>
+          </div>
+        </div>
+        <a href="contact.html" class="btn btn-primary" data-en="Reserve Your Spot" data-fr="Réserver Votre Place">Reserve Your Spot</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section fade-in" style="text-align:center;">
+    <p class="section-eyebrow" data-en="What's included" data-fr="Ce qui est inclus">What's included</p>
+    <h2 class="section-title" data-en="A Day at the Retreat" data-fr="Une Journée en Retraite">A Day at the Retreat</h2>
+    <div class="activities-grid" style="max-width:800px; margin:0 auto;">
+      <div class="activity-card" style="text-align:center;">
+        <div class="activity-icon">🌅</div>
+        <h4 data-en="Morning" data-fr="Matin">Morning</h4>
+        <p data-en="Gentle yoga and breathing practice · Communal breakfast" data-fr="Yoga doux et pratique respiratoire · Petit-déjeuner en commun">Gentle yoga and breathing practice · Communal breakfast</p>
+      </div>
+      <div class="activity-card" style="text-align:center;">
+        <div class="activity-icon">🎵</div>
+        <h4 data-en="Afternoon" data-fr="Après-midi">Afternoon</h4>
+        <p data-en="Guided vocal sessions · Group singing · Sound exploration" data-fr="Séances vocales guidées · Chant collectif · Exploration sonore">Guided vocal sessions · Group singing · Sound exploration</p>
+      </div>
+      <div class="activity-card" style="text-align:center;">
+        <div class="activity-icon">🌙</div>
+        <h4 data-en="Evening" data-fr="Soirée">Evening</h4>
+        <p data-en="Sound meditation · Shared dinner · Campfire voices" data-fr="Méditation sonore · Dîner partagé · Voix autour du feu">Sound meditation · Shared dinner · Campfire voices</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <p class="footer-logo-text">Expressive Singing</p>
+        <p class="footer-tagline" data-en="Voice. Expression. Transformation." data-fr="Voix. Expression. Transformation.">Voice. Expression. Transformation.</p>
+      </div>
+      <div class="footer-links-group">
+        <p class="footer-group-title" data-en="Explore" data-fr="Explorer">Explore</p>
+        <a href="association.html" data-en="Association" data-fr="Association">Association</a>
+        <a href="company.html" data-en="Company" data-fr="Compagnie">Company</a>
+        <a href="classes.html" data-en="Classes" data-fr="Cours">Classes</a>
+        <a href="events.html" data-en="Events" data-fr="Événements">Events</a>
+      </div>
+      <div class="footer-links-group">
+        <p class="footer-group-title" data-en="Connect" data-fr="Se connecter">Connect</p>
+        <a href="retreats.html" data-en="Retreats" data-fr="Retraites">Retreats</a>
+        <a href="blog.html" data-en="Blog" data-fr="Blog">Blog</a>
+        <a href="contact.html" data-en="Contact" data-fr="Contact">Contact</a>
+      </div>
+      <div class="footer-social">
+        <p class="footer-group-title">Social</p>
+        <div class="footer-social-links">
+          <a href="#">Instagram</a><a href="#">Facebook</a><a href="#">YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Expressive Singing · Geneva, Switzerland</p>
+      <p data-en="Crafted with ♥ for the voice" data-fr="Créé avec ♥ pour la voix">Crafted with ♥ for the voice</p>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Expressive Singing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="nav" id="mainNav">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.png" alt="Expressive Singing" onerror="this.style.display='none'; this.nextSibling.style.display='block'">
+      <span class="nav-logo-text" style="display:none">Expressive Singing</span>
+    </a>
+    <button class="nav-hamburger" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="navLinks">
+      <a href="association.html" class="nav-link" data-en="Association" data-fr="Association">Association</a>
+      <a href="company.html" class="nav-link" data-en="Company" data-fr="Compagnie">Company</a>
+      <a href="classes.html" class="nav-link" data-en="Classes" data-fr="Cours">Classes</a>
+      <a href="events.html" class="nav-link" data-en="Events" data-fr="Événements">Events</a>
+      <a href="retreats.html" class="nav-link" data-en="Retreats" data-fr="Retraites">Retreats</a>
+      <a href="blog.html" class="nav-link" data-en="Blog" data-fr="Blog">Blog</a>
+      <a href="contact.html" class="nav-link" data-en="Contact" data-fr="Contact">Contact</a>
+      <button class="lang-btn" id="langBtn" onclick="toggleLang()">FR</button>
+    </div>
+  </nav>
+
+  <div class="page-hero" style="min-height:35vh;">
+    <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=1600&q=80')"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <p class="section-eyebrow" style="color:var(--gold-lt)" data-en="Get in touch" data-fr="Contactez-nous">Get in touch</p>
+      <h1 data-en="📩 Contact" data-fr="📩 Contact">📩 Contact</h1>
+    </div>
+  </div>
+
+  <section class="content-section fade-in">
+    <div class="contact-grid">
+      <!-- INFO -->
+      <div class="contact-info">
+        <h2 data-en="Let's Talk" data-fr="Parlons-nous">Let's Talk</h2>
+        <p style="color:var(--muted); margin-bottom:36px;" data-en="Whether you want to book a class, ask about membership, discuss a collaboration or simply say hello — we'd love to hear from you." data-fr="Que vous souhaitiez réserver un cours, vous renseigner sur l'adhésion, discuter d'une collaboration ou simplement dire bonjour — nous serions ravis de vous entendre.">
+          Whether you want to book a class, ask about membership, discuss a collaboration or simply say hello — we'd love to hear from you.
+        </p>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">✉️</div>
+          <div>
+            <p><strong>Email</strong></p>
+            <p><a href="mailto:info@expressivesingig.ch" style="color:var(--gold);">info@expressivesinging.ch</a></p>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📍</div>
+          <div>
+            <p><strong data-en="Location" data-fr="Adresse">Location</strong></p>
+            <p data-en="Geneva, Switzerland" data-fr="Genève, Suisse">Geneva, Switzerland</p>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📱</div>
+          <div>
+            <p><strong>Social</strong></p>
+            <p>
+              <a href="#" style="color:var(--gold);">Instagram</a> ·
+              <a href="#" style="color:var(--gold);">Facebook</a> ·
+              <a href="#" style="color:var(--gold);">YouTube</a>
+            </p>
+          </div>
+        </div>
+
+        <div style="margin-top:40px; padding:28px; background:var(--cream-dk); border-radius:var(--radius);">
+          <p style="font-family:var(--font-display); font-size:1.1rem; color:var(--forest); margin-bottom:8px;" data-en="Response time" data-fr="Délai de réponse">Response time</p>
+          <p style="color:var(--muted); font-size:0.92rem;" data-en="We aim to respond to all messages within 24–48 hours. For urgent booking requests, please mention that in your message." data-fr="Nous répondons à tous les messages dans les 24–48 heures. Pour les demandes de réservation urgentes, merci de le mentionner dans votre message.">
+            We aim to respond to all messages within 24–48 hours. For urgent booking requests, please mention that in your message.
+          </p>
+        </div>
+      </div>
+
+      <!-- FORM -->
+      <div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label data-en="First Name" data-fr="Prénom">First Name</label>
+              <input type="text" name="firstname" required>
+            </div>
+            <div class="form-group">
+              <label data-en="Last Name" data-fr="Nom">Last Name</label>
+              <input type="text" name="lastname" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label data-en="Subject" data-fr="Sujet">Subject</label>
+            <select name="subject">
+              <option value="" data-en="Choose a topic..." data-fr="Choisissez un sujet...">Choose a topic...</option>
+              <option value="class" data-en="Book a class" data-fr="Réserver un cours">Book a class</option>
+              <option value="membership" data-en="Membership" data-fr="Adhésion">Membership</option>
+              <option value="retreat" data-en="Retreat enquiry" data-fr="Retraite">Retreat enquiry</option>
+              <option value="performance" data-en="Performance / event" data-fr="Spectacle / événement">Performance / event</option>
+              <option value="collaboration" data-en="Collaboration" data-fr="Collaboration">Collaboration</option>
+              <option value="other" data-en="Other" data-fr="Autre">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label data-en="Message" data-fr="Message">Message</label>
+            <textarea name="message" required placeholder="" data-placeholder-en="Tell us about yourself and what you're looking for..." data-placeholder-fr="Parlez-nous de vous et de ce que vous recherchez..."></textarea>
+          </div>
+          <div class="form-group">
+            <label style="display:flex; align-items:center; gap:12px; text-transform:none; font-size:0.88rem; font-weight:400; color:var(--muted); cursor:pointer;">
+              <input type="checkbox" name="newsletter" style="width:16px; height:16px; accent-color:var(--forest);">
+              <span data-en="Keep me updated with news, events and workshops" data-fr="Tenez-moi informé(e) des actualités, événements et ateliers">Keep me updated with news, events and workshops</span>
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%; font-size:1rem; padding:16px;" data-en="Send Message" data-fr="Envoyer le Message">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <p class="footer-logo-text">Expressive Singing</p>
+        <p class="footer-tagline" data-en="Voice. Expression. Transformation." data-fr="Voix. Expression. Transformation.">Voice. Expression. Transformation.</p>
+      </div>
+      <div class="footer-links-group">
+        <p class="footer-group-title" data-en="Explore" data-fr="Explorer">Explore</p>
+        <a href="association.html" data-en="Association" data-fr="Association">Association</a>
+        <a href="company.html" data-en="Company" data-fr="Compagnie">Company</a>
+        <a href="classes.html" data-en="Classes" data-fr="Cours">Classes</a>
+        <a href="events.html" data-en="Events" data-fr="Événements">Events</a>
+      </div>
+      <div class="footer-links-group">
+        <p class="footer-group-title" data-en="Connect" data-fr="Se connecter">Connect</p>
+        <a href="retreats.html" data-en="Retreats" data-fr="Retraites">Retreats</a>
+        <a href="blog.html" data-en="Blog" data-fr="Blog">Blog</a>
+        <a href="contact.html" data-en="Contact" data-fr="Contact">Contact</a>
+        <a href="association.html#statutes" data-en="Statutes" data-fr="Statuts">Statutes</a>
+      </div>
+      <div class="footer-social">
+        <p class="footer-group-title">Social</p>
+        <div class="footer-social-links">
+          <a href="#">Instagram</a><a href="#">Facebook</a><a href="#">YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Expressive Singing · Geneva, Switzerland</p>
+      <p data-en="Crafted with ♥ for the voice" data-fr="Créé avec ♥ pour la voix">Crafted with ♥ for the voice</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    // Update textarea placeholders on lang change
+    const origToggle = window.toggleLang;
+    window.toggleLang = function() {
+      origToggle();
+      const ta = document.querySelector('textarea[data-placeholder-en]');
+      if (ta) {
+        const lang = localStorage.getItem('lang') || 'en';
+        ta.placeholder = lang === 'fr' ? ta.getAttribute('data-placeholder-fr') : ta.getAttribute('data-placeholder-en');
+      }
+    };
+  </script>
+</body>
+</html>

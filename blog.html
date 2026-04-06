@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Expressive Singing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="nav" id="mainNav">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.png" alt="Expressive Singing" onerror="this.style.display='none'; this.nextSibling.style.display='block'">
+      <span class="nav-logo-text" style="display:none">Expressive Singing</span>
+    </a>
+    <button class="nav-hamburger" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="navLinks">
+      <a href="association.html" class="nav-link" data-en="Association" data-fr="Association">Association</a>
+      <a href="company.html" class="nav-link" data-en="Company" data-fr="Compagnie">Company</a>
+      <a href="classes.html" class="nav-link" data-en="Classes" data-fr="Cours">Classes</a>
+      <a href="events.html" class="nav-link" data-en="Events" data-fr="Événements">Events</a>
+      <a href="retreats.html" class="nav-link" data-en="Retreats" data-fr="Retraites">Retreats</a>
+      <a href="blog.html" class="nav-link" data-en="Blog" data-fr="Blog">Blog</a>
+      <a href="contact.html" class="nav-link" data-en="Contact" data-fr="Contact">Contact</a>
+      <button class="lang-btn" id="langBtn" onclick="toggleLang()">FR</button>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1600&q=80')"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <p class="section-eyebrow" style="color:var(--gold-lt)" data-en="Knowledge & Inspiration" data-fr="Savoir & Inspiration">Knowledge & Inspiration</p>
+      <h1 data-en="📝 Blog" data-fr="📝 Blog">📝 Blog</h1>
+      <p data-en="Thoughts on voice, emotion, art and the human experience." data-fr="Réflexions sur la voix, l'émotion, l'art et l'expérience humaine.">Thoughts on voice, emotion, art and the human experience.</p>
+    </div>
+  </div>
+
+  <section class="content-section fade-in">
+    <div class="blog-grid">
+      <div class="blog-card">
+        <div class="blog-card-img">
+          <img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=600&q=80" alt="The voice and emotions">
+        </div>
+        <div class="blog-card-body">
+          <p class="blog-tag" data-en="Voice Science" data-fr="Science Vocale">Voice Science</p>
+          <h3 data-en="Why Does Singing Make Us Cry?" data-fr="Pourquoi le Chant Nous Fait-il Pleurer ?">Why Does Singing Make Us Cry?</h3>
+          <p data-en="The science behind the profound emotional resonance of vocal music — and why your voice holds the key to your deepest feelings." data-fr="La science derrière la profonde résonance émotionnelle de la musique vocale — et pourquoi votre voix est la clé de vos sentiments les plus profonds.">The science behind the profound emotional resonance of vocal music — and why your voice holds the key to your deepest feelings.</p>
+          <br>
+          <a href="#" class="text-link" data-en="Read more →" data-fr="Lire la suite →">Read more →</a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-card-img">
+          <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80" alt="Yoga and voice">
+        </div>
+        <div class="blog-card-body">
+          <p class="blog-tag" data-en="Wellbeing" data-fr="Bien-être">Wellbeing</p>
+          <h3 data-en="The Voice-Body Connection" data-fr="La Connexion Corps-Voix">The Voice-Body Connection</h3>
+          <p data-en="How yoga, breathing and movement unlock vocal freedom. Five exercises to try before your next singing session." data-fr="Comment le yoga, la respiration et le mouvement libèrent la voix. Cinq exercices à essayer avant votre prochaine séance de chant.">How yoga, breathing and movement unlock vocal freedom. Five exercises to try before your next singing session.</p>
+          <br>
+          <a href="#" class="text-link" data-en="Read more →" data-fr="Lire la suite →">Read more →</a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-card-img">
+          <img src="https://images.unsplash.com/photo-1519307032527-9f56b74bca38?w=600&q=80" alt="Performance tips">
+        </div>
+        <div class="blog-card-body">
+          <p class="blog-tag" data-en="Performance" data-fr="Scène">Performance</p>
+          <h3 data-en="Stage Fright Is Just Excitement" data-fr="La Trac, c'est Juste de l'Excitation">Stage Fright Is Just Excitement</h3>
+          <p data-en="Reframing performance anxiety and learning to channel nervous energy into presence, power and connection with your audience." data-fr="Recadrer l'anxiété de performance et apprendre à canaliser l'énergie nerveuse en présence, puissance et connexion avec votre public.">Reframing performance anxiety and learning to channel nervous energy into presence, power and connection with your audience.</p>
+          <br>
+          <a href="#" class="text-link" data-en="Read more →" data-fr="Lire la suite →">Read more →</a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-card-img">
+          <img src="https://images.unsplash.com/photo-1513297887119-d46091b24bfa?w=600&q=80" alt="Vocal exercises">
+        </div>
+        <div class="blog-card-body">
+          <p class="blog-tag" data-en="Technique" data-fr="Technique">Technique</p>
+          <h3 data-en="5 Vocal Exercises for Any Morning" data-fr="5 Exercices Vocaux pour Chaque Matin">5 Vocal Exercises for Any Morning</h3>
+          <p data-en="A gentle, effective warm-up routine that professional singers use to wake up their voice and prepare for the day — no musical training needed." data-fr="Une routine d'échauffement douce et efficace que les chanteurs professionnels utilisent pour réveiller leur voix — aucune formation musicale nécessaire.">A gentle, effective warm-up routine that professional singers use to wake up their voice and prepare for the day.</p>
+          <br>
+          <a href="#" class="text-link" data-en="Read more →" data-fr="Lire la suite →">Read more →</a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-card-img">
+          <img src="https://images.unsplash.com/photo-1527525443983-6e60c75fff46?w=600&q=80" alt="Community singing">
+        </div>
+        <div class="blog-card-body">
+          <p class="blog-tag" data-en="Community" data-fr="Communauté">Community</p>
+          <h3 data-en="What Happens When We Sing Together" data-fr="Ce Qui Se Passe Quand On Chante Ensemble">What Happens When We Sing Together</h3>
+          <p data-en="Research is clear: group singing creates measurable bonds of trust, empathy and joy. Here's the neuroscience — and one participant's story." data-fr="La recherche est claire : le chant collectif crée des liens mesurables de confiance, d'empathie et de joie. Voici la neuroscience — et le témoignage d'un participant.">Research is clear: group singing creates measurable bonds of trust, empathy and joy. Here's the neuroscience.</p>
+          <br>
+          <a href="#" class="text-link" data-en="Read more →" data-fr="Lire la suite →">Read more →</a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-card-img">
+          <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=600&q=80" alt="Music and identity">
+        </div>
+        <div class="blog-card-body">
+          <p class="blog-tag" data-en="Identity" data-fr="Identité">Identity</p>
+          <h3 data-en="Finding Your Authentic Voice" data-fr="Trouver Sa Voix Authentique">Finding Your Authentic Voice</h3>
+          <p data-en="Beyond technique and repertoire: the deeper journey of discovering and owning the voice that is uniquely, powerfully yours." data-fr="Au-delà de la technique et du répertoire : le voyage plus profond pour découvrir et s'approprier la voix qui est uniquement, puissamment la vôtre.">Beyond technique and repertoire: the deeper journey of discovering and owning the voice that is uniquely, powerfully yours.</p>
+          <br>
+          <a href="#" class="text-link" data-en="Read more →" data-fr="Lire la suite →">Read more →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <p class="footer-logo-text">Expressive Singing</p>
+        <p class="footer-tagline" data-en="Voice. Expression. Transformation." data-fr="Voix. Expression. Transformation.">Voice. Expression. Transformation.</p>
+      </div>
+      <div class="footer-links-group">
+        <p class="footer-group-title" data-en="Explore" data-fr="Explorer">Explore</p>
+        <a href="association.html" data-en="Association" data-fr="Association">Association</a>
+        <a href="company.html" data-en="Company" data-fr="Compagnie">Company</a>
+        <a href="classes.html" data-en="Classes" data-fr="Cours">Classes</a>
+        <a href="events.html" data-en="Events" data-fr="Événements">Events</a>
+      </div>
+      <div class="footer-links-group">
+        <p class="footer-group-title" data-en="Connect" data-fr="Se connecter">Connect</p>
+        <a href="retreats.html" data-en="Retreats" data-fr="Retraites">Retreats</a>
+        <a href="blog.html" data-en="Blog" data-fr="Blog">Blog</a>
+        <a href="contact.html" data-en="Contact" data-fr="Contact">Contact</a>
+      </div>
+      <div class="footer-social">
+        <p class="footer-group-title">Social</p>
+        <div class="footer-social-links">
+          <a href="#">Instagram</a><a href="#">Facebook</a><a href="#">YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Expressive Singing · Geneva, Switzerland</p>
+      <p data-en="Crafted with ♥ for the voice" data-fr="Créé avec ♥ pour la voix">Crafted with ♥ for the voice</p>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

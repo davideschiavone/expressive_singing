@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events | Expressive Singing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="nav" id="mainNav">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.png" alt="Expressive Singing" onerror="this.style.display='none'; this.nextSibling.style.display='block'">
+      <span class="nav-logo-text" style="display:none">Expressive Singing</span>
+    </a>
+    <button class="nav-hamburger" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="navLinks">
+      <a href="association.html" class="nav-link" data-en="Association" data-fr="Association">Association</a>
+      <a href="company.html" class="nav-link" data-en="Company" data-fr="Compagnie">Company</a>
+      <a href="classes.html" class="nav-link" data-en="Classes" data-fr="Cours">Classes</a>
+      <a href="events.html" class="nav-link" data-en="Events" data-fr="Événements">Events</a>
+      <a href="retreats.html" class="nav-link" data-en="Retreats" data-fr="Retraites">Retreats</a>
+      <a href="blog.html" class="nav-link" data-en="Blog" data-fr="Blog">Blog</a>
+      <a href="contact.html" class="nav-link" data-en="Contact" data-fr="Contact">Contact</a>
+      <button class="lang-btn" id="langBtn" onclick="toggleLang()">FR</button>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=1600&q=80')"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <p class="section-eyebrow" style="color:var(--gold-lt)" data-en="Upcoming" data-fr="À venir">Upcoming</p>
+      <h1 data-en="📅 Events" data-fr="📅 Événements">📅 Events</h1>
+      <p data-en="Concerts, workshops and retreats — moments that stay with you." data-fr="Concerts, ateliers et retraites — des moments qui restent en vous.">Concerts, workshops and retreats — moments that stay with you.</p>
+    </div>
+  </div>
+
+  <section class="content-section fade-in">
+    <p class="section-eyebrow" data-en="2025 Season" data-fr="Saison 2025">2025 Season</p>
+    <h2 class="section-title" data-en="Upcoming Events" data-fr="Événements à Venir">Upcoming Events</h2>
+    <div class="events-list">
+
+      <div class="event-item">
+        <div class="event-date">
+          <div class="day">14</div>
+          <div class="month">Jun</div>
+        </div>
+        <div class="event-info">
+          <h3 data-en="Soundtrack — Geneva Premiere" data-fr="Soundtrack — Première Genevoise">Soundtrack — Geneva Premiere</h3>
+          <p data-en="Théâtre du Grütli · 20:00 · All ages · EN/FR" data-fr="Théâtre du Grütli · 20:00 · Tout public · EN/FR">Théâtre du Grütli · 20:00 · All ages · EN/FR</p>
+        </div>
+        <div class="event-price">CHF 25</div>
+        <a href="contact.html" class="btn btn-primary" style="white-space:nowrap;" data-en="Book" data-fr="Réserver">Book</a>
+      </div>
+
+      <div class="event-item">
+        <div class="event-date">
+          <div class="day">22</div>
+          <div class="month">Jun</div>
+        </div>
+        <div class="event-info">
+          <h3 data-en="Voice & Body Workshop" data-fr="Atelier Voix & Corps">Voice & Body Workshop</h3>
+          <p data-en="Studio Expressive Singing · 10:00–14:00 · All levels" data-fr="Studio Expressive Singing · 10:00–14:00 · Tous niveaux">Studio Expressive Singing · 10:00–14:00 · All levels</p>
+        </div>
+        <div class="event-price">CHF 60</div>
+        <a href="contact.html" class="btn btn-primary" style="white-space:nowrap;" data-en="Register" data-fr="S'inscrire">Register</a>
+      </div>
+
+      <div class="event-item">
+        <div class="event-date">
+          <div class="day">05</div>
+          <div class="month">Jul</div>
+        </div>
+        <div class="event-info">
+          <h3 data-en="Open Mic Night" data-fr="Soirée Open Mic">Open Mic Night</h3>
+          <p data-en="Cave 12, Geneva · 19:30 · Free entry" data-fr="Cave 12, Genève · 19:30 · Entrée libre">Cave 12, Geneva · 19:30 · Free entry</p>
+        </div>
+        <div class="event-price" data-en="Free" data-fr="Gratuit">Free</div>
+        <a href="contact.html" class="btn btn-primary" style="white-space:nowrap;" data-en="Attend" data-fr="Participer">Attend</a>
+      </div>
+
+      <div class="event-item">
+        <div class="event-date">
+          <div class="day">19</div>
+          <div class="month">Jul</div>
+        </div>
+        <div class="event-info">
+          <h3 data-en="Summer Vocal Retreat" data-fr="Retraite Vocale d'Été">Summer Vocal Retreat</h3>
+          <p data-en="Jura Mountains · 3 days · Voice + Yoga + Nature" data-fr="Montagnes du Jura · 3 jours · Voix + Yoga + Nature">Jura Mountains · 3 days · Voice + Yoga + Nature</p>
+        </div>
+        <div class="event-price">CHF 490</div>
+        <a href="retreats.html" class="btn btn-primary" style="white-space:nowrap;" data-en="Explore" data-fr="Explorer">Explore</a>
+      </div>
+
+      <div class="event-item">
+        <div class="event-date">
+          <div class="day">13</div>
+          <div class="month">Sep</div>
+        </div>
+        <div class="event-info">
+          <h3 data-en="Baroque Vocal Workshop" data-fr="Atelier Vocal Baroque">Baroque Vocal Workshop</h3>
+          <p data-en="Studio Expressive Singing · Half day · With Emma Laurent" data-fr="Studio Expressive Singing · Demi-journée · Avec Emma Laurent">Studio Expressive Singing · Half day · With Emma Laurent</p>
+        </div>
+        <div class="event-price">CHF 75</div>
+        <a href="contact.html" class="btn btn-primary" style="white-space:nowrap;" data-en="Register" data-fr="S'inscrire">Register</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <p class="footer-logo-text">Expressive Singing</p>
+        <p class="footer-tagline" data-en="Voice. Expression. Transformation." data-fr="Voix. Expression. Transformation.">Voice. Expression. Transformation.</p>
+      </div>
+      <div class="footer-links-group">
+        <p class="footer-group-title" data-en="Explore" data-fr="Explorer">Explore</p>
+        <a href="association.html" data-en="Association" data-fr="Association">Association</a>
+        <a href="company.html" data-en="Company" data-fr="Compagnie">Company</a>
+        <a href="classes.html" data-en="Classes" data-fr="Cours">Classes</a>
+        <a href="events.html" data-en="Events" data-fr="Événements">Events</a>
+      </div>
+      <div class="footer-links-group">
+        <p class="footer-group-title" data-en="Connect" data-fr="Se connecter">Connect</p>
+        <a href="retreats.html" data-en="Retreats" data-fr="Retraites">Retreats</a>
+        <a href="blog.html" data-en="Blog" data-fr="Blog">Blog</a>
+        <a href="contact.html" data-en="Contact" data-fr="Contact">Contact</a>
+      </div>
+      <div class="footer-social">
+        <p class="footer-group-title">Social</p>
+        <div class="footer-social-links">
+          <a href="#">Instagram</a><a href="#">Facebook</a><a href="#">YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Expressive Singing · Geneva, Switzerland</p>
+      <p data-en="Crafted with ♥ for the voice" data-fr="Créé avec ♥ pour la voix">Crafted with ♥ for the voice</p>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

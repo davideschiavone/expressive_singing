@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classes | Expressive Singing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="nav" id="mainNav">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.png" alt="Expressive Singing" onerror="this.style.display='none'; this.nextSibling.style.display='block'">
+      <span class="nav-logo-text" style="display:none">Expressive Singing</span>
+    </a>
+    <button class="nav-hamburger" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="navLinks">
+      <a href="association.html" class="nav-link" data-en="Association" data-fr="Association">Association</a>
+      <a href="company.html" class="nav-link" data-en="Company" data-fr="Compagnie">Company</a>
+      <a href="classes.html" class="nav-link" data-en="Classes" data-fr="Cours">Classes</a>
+      <a href="events.html" class="nav-link" data-en="Events" data-fr="Événements">Events</a>
+      <a href="retreats.html" class="nav-link" data-en="Retreats" data-fr="Retraites">Retreats</a>
+      <a href="blog.html" class="nav-link" data-en="Blog" data-fr="Blog">Blog</a>
+      <a href="contact.html" class="nav-link" data-en="Contact" data-fr="Contact">Contact</a>
+      <button class="lang-btn" id="langBtn" onclick="toggleLang()">FR</button>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=1600&q=80')"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <p class="section-eyebrow" style="color:var(--gold-lt)" data-en="Book your practice" data-fr="Réservez votre pratique">Book your practice</p>
+      <h1 data-en="🎤 Classes" data-fr="🎤 Cours">🎤 Classes</h1>
+      <p data-en="From private sessions to group journeys — find the practice that calls to your voice." data-fr="Des séances privées aux voyages collectifs — trouvez la pratique qui appelle votre voix.">From private sessions to group journeys — find the practice that calls to your voice.</p>
+    </div>
+  </div>
+
+  <!-- CLASS TYPES -->
+  <section class="content-section fade-in">
+    <p class="section-eyebrow" data-en="What we offer" data-fr="Ce que nous offrons">What we offer</p>
+    <h2 class="section-title" data-en="Choose Your Path" data-fr="Choisissez Votre Voie">Choose Your Path</h2>
+    <div class="classes-grid">
+      <div class="class-card">
+        <div class="class-card-header">
+          <div class="class-card-icon">🎤</div>
+          <h3 data-en="Private Sessions" data-fr="Séances Privées">Private Sessions</h3>
+        </div>
+        <div class="class-card-body">
+          <p data-en="Fully personalised one-on-one coaching. Work on technique, repertoire, stage presence or voice health at your own pace with our expert teachers." data-fr="Coaching individuel entièrement personnalisé. Travaillez la technique, le répertoire, la présence scénique ou la santé vocale à votre rythme avec nos enseignants experts.">
+            Fully personalised one-on-one coaching. Work on technique, repertoire, stage presence or voice health at your own pace with our expert teachers.
+          </p>
+          <div class="class-card-meta">
+            <span>⏱ 60 min</span>
+            <span>👤 <span data-en="All levels" data-fr="Tous niveaux">All levels</span></span>
+            <span>💶 CHF 90</span>
+          </div>
+          <a href="contact.html" class="btn btn-primary" data-en="Book Now" data-fr="Réserver">Book Now</a>
+        </div>
+      </div>
+
+      <div class="class-card">
+        <div class="class-card-header">
+          <div class="class-card-icon">🎵</div>
+          <h3 data-en="Group Classes" data-fr="Cours Collectifs">Group Classes</h3>
+        </div>
+        <div class="class-card-body">
+          <p data-en="Weekly group sessions exploring vocal freedom, harmony and collective expression. A joyful space for all levels and all voices — really." data-fr="Séances collectives hebdomadaires explorant la liberté vocale, l'harmonie et l'expression collective. Un espace joyeux pour tous les niveaux et toutes les voix.">
+            Weekly group sessions exploring vocal freedom, harmony and collective expression. A joyful space for all levels and all voices — really.
+          </p>
+          <div class="class-card-meta">
+            <span>⏱ 90 min</span>
+            <span>👥 <span data-en="Max 12 people" data-fr="Max 12 personnes">Max 12 people</span></span>
+            <span>💶 CHF 25</span>
+          </div>
+          <a href="contact.html" class="btn btn-primary" data-en="Book Now" data-fr="Réserver">Book Now</a>
+        </div>
+      </div>
+
+      <div class="class-card">
+        <div class="class-card-header">
+          <div class="class-card-icon">🌱</div>
+          <h3 data-en="Workshops" data-fr="Ateliers">Workshops</h3>
+        </div>
+        <div class="class-card-body">
+          <p data-en="Focused thematic workshops on specific techniques, styles or experiences. Offered monthly with different themes — baroque, folk, body & voice, storytelling." data-fr="Ateliers thématiques ciblés sur des techniques, styles ou expériences spécifiques. Proposés mensuellement avec différents thèmes — baroque, folk, corps & voix, storytelling.">
+            Focused thematic workshops on specific techniques, styles or experiences. Offered monthly with different themes.
+          </p>
+          <div class="class-card-meta">
+            <span>⏱ <span data-en="3–4 hours" data-fr="3–4 heures">3–4 hours</span></span>
+            <span>👥 <span data-en="Max 20 people" data-fr="Max 20 personnes">Max 20 people</span></span>
+            <span>💶 CHF 45–80</span>
+          </div>
+          <a href="events.html" class="btn btn-primary" data-en="See Schedule" data-fr="Voir le Programme">See Schedule</a>
+        </div>
+      </div>
+
+      <div class="class-card">
+        <div class="class-card-header">
+          <div class="class-card-icon">✨</div>
+          <h3 data-en="Vocal Journeys" data-fr="Voyages Vocaux">Vocal Journeys</h3>
+        </div>
+        <div class="class-card-body">
+          <p data-en="Multi-week programmes designed as complete transformational arcs. Ideal for those seeking deep change in their relationship to their voice and themselves." data-fr="Programmes de plusieurs semaines conçus comme des arcs de transformation complets. Idéal pour ceux qui cherchent un changement profond dans leur relation à leur voix.">
+            Multi-week programmes designed as complete transformational arcs. Ideal for those seeking deep change in their relationship to their voice and themselves.
+          </p>
+          <div class="class-card-meta">
+            <span>⏱ <span data-en="6–10 weeks" data-fr="6–10 semaines">6–10 weeks</span></span>
+            <span>👥 <span data-en="Max 8 people" data-fr="Max 8 personnes">Max 8 people</span></span>
+            <span>💶 <span data-en="From CHF 350" data-fr="À partir de CHF 350">From CHF 350</span></span>
+          </div>
+          <a href="contact.html" class="btn btn-primary" data-en="Enquire" data-fr="S'informer">Enquire</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING NOTE -->
+  <section class="content-section content-section--alt fade-in">
+    <div style="max-width:680px; margin:0 auto; text-align:center;">
+      <p class="section-eyebrow" data-en="How to book" data-fr="Comment réserver">How to book</p>
+      <h2 class="section-title" data-en="Ready to Begin?" data-fr="Prêt(e) à Commencer ?">Ready to Begin?</h2>
+      <p style="color:var(--muted); margin-bottom:32px;" data-en="Contact us directly to check availability, ask questions or register for any class. We'll follow up within 24 hours to confirm your booking and send payment details." data-fr="Contactez-nous directement pour vérifier la disponibilité, poser des questions ou vous inscrire à un cours. Nous vous répondrons dans les 24 heures pour confirmer votre réservation et envoyer les informations de paiement.">
+        Contact us directly to check availability, ask questions or register for any class. We'll follow up within 24 hours to confirm your booking and send payment details.
+      </p>
+      <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+        <a href="contact.html" class="btn btn-primary" data-en="Contact Us" data-fr="Nous contacter">Contact Us</a>
+        <a href="mailto:info@expressivesingig.ch" class="btn btn-forest" data-en="Send Email" data-fr="Envoyer Email">Send Email</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <p class="footer-logo-text">Expressive Singing</p>
+        <p class="footer-tagline" data-en="Voice. Expression. Transformation." data-fr="Voix. Expression. Transformation.">Voice. Expression. Transformation.</p>
+      </div>
+      <div class="footer-links-group">
+        <p class="footer-group-title" data-en="Explore" data-fr="Explorer">Explore</p>
+        <a href="association.html" data-en="Association" data-fr="Association">Association</a>
+        <a href="company.html" data-en="Company" data-fr="Compagnie">Company</a>
+        <a href="classes.html" data-en="Classes" data-fr="Cours">Classes</a>
+        <a href="events.html" data-en="Events" data-fr="Événements">Events</a>
+      </div>
+      <div class="footer-links-group">
+        <p class="footer-group-title" data-en="Connect" data-fr="Se connecter">Connect</p>
+        <a href="retreats.html" data-en="Retreats" data-fr="Retraites">Retreats</a>
+        <a href="blog.html" data-en="Blog" data-fr="Blog">Blog</a>
+        <a href="contact.html" data-en="Contact" data-fr="Contact">Contact</a>
+      </div>
+      <div class="footer-social">
+        <p class="footer-group-title">Social</p>
+        <div class="footer-social-links">
+          <a href="#">Instagram</a><a href="#">Facebook</a><a href="#">YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Expressive Singing · Geneva, Switzerland</p>
+      <p data-en="Crafted with ♥ for the voice" data-fr="Créé avec ♥ pour la voix">Crafted with ♥ for the voice</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
