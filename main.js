@@ -3,41 +3,31 @@
    ============================================================ */
 
 // ---- LANGUAGE SYSTEM ----
-const TRANSLATIONS = {
-  en: {
-    'nav.association': 'Association',
-    'nav.company': 'Company',
-    'nav.classes': 'Classes',
-    'nav.events': 'Events',
-    'nav.retreats': 'Retreats',
-    'nav.blog': 'Blog',
-    'nav.contact': 'Contact',
-  },
-  fr: {
-    'nav.association': 'Association',
-    'nav.company': 'Compagnie',
-    'nav.classes': 'Cours',
-    'nav.events': 'Événements',
-    'nav.retreats': 'Retraites',
-    'nav.blog': 'Blog',
-    'nav.contact': 'Contact',
-  }
-};
-
+// currentLang is set immediately (also in <head> inline script to avoid flash)
 let currentLang = localStorage.getItem('lang') || 'en';
 
 function applyLang(lang) {
   currentLang = lang;
   localStorage.setItem('lang', lang);
+
+  // Update button label
   const btn = document.getElementById('langBtn');
   if (btn) btn.textContent = lang === 'en' ? 'FR' : 'EN';
 
-  // Update all [data-en] / [data-fr] elements
+  // Update all elements that carry data-en / data-fr translations
   document.querySelectorAll('[data-en]').forEach(el => {
-    el.textContent = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-fr');
+    const text = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-fr');
+    if (text !== null) el.textContent = text;
   });
 
-  // Update HTML lang attribute
+  // Update textarea placeholders specifically
+  document.querySelectorAll('[data-placeholder-en]').forEach(el => {
+    el.placeholder = lang === 'fr'
+      ? el.getAttribute('data-placeholder-fr')
+      : el.getAttribute('data-placeholder-en');
+  });
+
+  // Update <html lang="..."> attribute for accessibility
   document.documentElement.lang = lang;
 }
 
