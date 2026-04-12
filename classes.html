@@ -70,7 +70,7 @@
             <span>👤 <span data-en="All levels" data-fr="Tous niveaux">All levels</span></span>
             <span>💶 CHF 90</span>
           </div>
-          <a href="contact.html" class="btn btn-primary" data-en="Book Now" data-fr="Réserver">Book Now</a>
+          <a href="#book" class="btn btn-primary" data-en="Book Now" data-fr="Réserver">Book Now</a>
         </div>
       </div>
 
@@ -88,7 +88,7 @@
             <span>👥 <span data-en="Max 12 people" data-fr="Max 12 personnes">Max 12 people</span></span>
             <span>💶 CHF 25</span>
           </div>
-          <a href="contact.html" class="btn btn-primary" data-en="Book Now" data-fr="Réserver">Book Now</a>
+          <a href="#book" class="btn btn-primary" data-en="Book Now" data-fr="Réserver">Book Now</a>
         </div>
       </div>
 
@@ -124,7 +124,7 @@
             <span>👥 <span data-en="Open to all" data-fr="Ouvert à tous">Open to all</span></span>
             <span>💶 CHF 20</span>
           </div>
-          <a href="contact.html" class="btn btn-primary" data-en="Join the Choir" data-fr="Rejoindre le Chœur">Join the Choir</a>
+          <a href="#book" class="btn btn-primary" data-en="Join the Choir" data-fr="Rejoindre le Chœur">Join the Choir</a>
         </div>
       </div>
 
@@ -142,24 +142,25 @@
             <span>👥 <span data-en="Max 8 people" data-fr="Max 8 personnes">Max 8 people</span></span>
             <span>💶 <span data-en="From CHF 350" data-fr="À partir de CHF 350">From CHF 350</span></span>
           </div>
-          <a href="contact.html" class="btn btn-primary" data-en="Enquire" data-fr="S'informer">Enquire</a>
+          <a href="#book" class="btn btn-primary" data-en="Enquire" data-fr="S'informer">Enquire</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- BOOKING NOTE -->
-  <section class="content-section content-section--alt fade-in">
-    <div style="max-width:680px; margin:0 auto; text-align:center;">
-      <p class="section-eyebrow" data-en="How to book" data-fr="Comment réserver">How to book</p>
-      <h2 class="section-title" data-en="Ready to Begin?" data-fr="Prêt(e) à Commencer ?">Ready to Begin?</h2>
-      <p style="color:var(--muted); margin-bottom:32px;" data-en="Contact us directly to check availability, ask questions or register for any class. We'll follow up within 24 hours to confirm your booking and send payment details." data-fr="Contactez-nous directement pour vérifier la disponibilité, poser des questions ou vous inscrire à un cours. Nous vous répondrons dans les 24 heures pour confirmer votre réservation et envoyer les informations de paiement.">
-        Contact us directly to check availability, ask questions or register for any class. We'll follow up within 24 hours to confirm your booking and send payment details.
+  <!-- BOOKING -->
+  <section id="book" class="content-section content-section--alt fade-in">
+    <div style="max-width:700px; margin:0 auto 40px; text-align:center;">
+      <p class="section-eyebrow" data-en="Book online" data-fr="Réserver en ligne">Book online</p>
+      <h2 class="section-title" data-en="Pick Your Time" data-fr="Choisissez Votre Créneau">Pick Your Time</h2>
+      <p style="color:var(--muted);" data-en="Choose a slot, pay securely online and receive an instant confirmation by email." data-fr="Choisissez un créneau, payez en ligne en toute sécurité et recevez une confirmation instantanée par email.">
+        Choose a slot, pay securely online and receive an instant confirmation by email.
       </p>
-      <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
-        <a href="contact.html" class="btn btn-primary" data-en="Contact Us" data-fr="Nous contacter">Contact Us</a>
-        <a href="/cdn-cgi/l/email-protection#dcb5b2bab39cb9a4acaeb9afafb5aab9afb5b2bbb5bbf2bfb4" class="btn btn-forest" data-en="Send Email" data-fr="Envoyer Email">Send Email</a>
-      </div>
+    </div>
+    <!-- Calendly inline widget -->
+    <div class="calendly-inline-widget"
+         data-url="https://calendly.com/imaneelbaladi"
+         style="min-width:320px; height:700px; border-radius:12px; overflow:hidden;">
     </div>
   </section>
 
@@ -195,6 +196,7 @@
     </div>
   </footer>
 
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
   <script src="main.js"></script>
 </body>
 </html>
