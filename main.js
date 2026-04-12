@@ -55,17 +55,30 @@ function initNav() {
 function initHamburger() {
   const toggle = document.getElementById('navToggle');
   const links = document.getElementById('navLinks');
+  const nav = document.getElementById('mainNav');
   if (!toggle || !links) return;
 
-  toggle.addEventListener('click', () => {
-    links.classList.toggle('open');
-    const isOpen = links.classList.contains('open');
-    toggle.setAttribute('aria-expanded', isOpen);
+  function closeMenu() {
+    links.classList.remove('open');
+    toggle.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }
+
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = links.classList.toggle('open');
+    toggle.classList.toggle('open', isOpen);
+    toggle.setAttribute('aria-expanded', String(isOpen));
   });
 
   // Close on link click
   links.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => links.classList.remove('open'));
+    link.addEventListener('click', closeMenu);
+  });
+
+  // Close when clicking outside the nav
+  document.addEventListener('click', (e) => {
+    if (nav && !nav.contains(e.target)) closeMenu();
   });
 }
 

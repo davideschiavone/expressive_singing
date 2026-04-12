@@ -1,214 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Expressive Singing</title>
-    <style>
-        :root {
-            --bg-color: #f5eee6; 
-            --navy: #1a2238;    
-            --red: #d1493e;     
-            --yellow: #f2b731;  
-        }
-
-        body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--navy);
-            margin: 0;
-            padding: 40px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .nav-top {
-            width: 100%;
-            max-width: 1200px;
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 50px;
-        }
-
-        .back-link {
-            color: var(--navy);
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 1.2rem;
-            border-bottom: 3px solid var(--red);
-            text-transform: uppercase;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 40px;
-            border-bottom: 4px solid var(--yellow);
-        }
-
-        /* Griglia per le 6 persone */
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 40px;
-            width: 100%;
-            max-width: 1200px;
-        }
-
-        .profile-card {
-            background: white;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
-            text-align: center;
-        }
-
-        .profile-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 15px;
-            border: 4px solid var(--bg-color);
-            background-color: #ddd; /* Segnaposto se manca la foto */
-        }
-
-        .name {
-            font-size: 1.4rem;
-            font-weight: bold;
-            margin: 10px 0 5px 0;
-            color: var(--red);
-        }
-
-        .role {
-            font-size: 1rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            color: var(--navy);
-            margin-bottom: 15px;
-            letter-spacing: 1px;
-        }
-
-        .bio {
-            font-size: 0.95rem;
-            line-height: 1.5;
-            color: #555;
-        }
-
-        button.lang-btn {
-            background: var(--navy);
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-
-        [lang="fr"] { display: none; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Expressive Singing</title>
+  <meta name="description" content="Meet the Expressive Singing team: vocal coaches, performers, and creative practitioners in Geneva.">
+  <meta property="og:title" content="About Us | Expressive Singing">
+  <meta property="og:description" content="Meet the Expressive Singing team: vocal coaches, performers, and creative practitioners in Geneva.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- Language applied immediately before paint to prevent flash -->
+  <script>
+    (function() {
+      var lang = localStorage.getItem('lang') || 'en';
+      document.documentElement.lang = lang;
+      document.documentElement.setAttribute('data-lang', lang);
+    })();
+  </script>
 </head>
 <body>
 
-    <div class="nav-top">
-        <a href="index.html" class="back-link" id="backLink">← Home</a>
-        <button class="lang-btn" onclick="toggleLang()" id="langBtn">FR</button>
+  <nav class="nav" id="mainNav">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.png" alt="Expressive Singing" onerror="this.style.display='none'; this.nextSibling.style.display='block'">
+      <span class="nav-logo-text" style="display:none">Expressive Singing</span>
+    </a>
+    <button class="nav-hamburger" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="navLinks">
+      <a href="association.html" class="nav-link" data-en="Association" data-fr="Association">Association</a>
+      <a href="company.html" class="nav-link" data-en="Company" data-fr="Compagnie">Company</a>
+      <a href="classes.html" class="nav-link" data-en="Classes" data-fr="Cours">Classes</a>
+      <a href="events.html" class="nav-link" data-en="Events" data-fr="Événements">Events</a>
+      <a href="retreats.html" class="nav-link" data-en="Retreats" data-fr="Retraites">Retreats</a>
+      <a href="blog.html" class="nav-link" data-en="Blog" data-fr="Blog">Blog</a>
+      <a href="contact.html" class="nav-link" data-en="Contact" data-fr="Contact">Contact</a>
+      <button class="lang-btn" id="langBtn" onclick="toggleLang()">FR</button>
     </div>
+  </nav>
 
-    <h1 id="title">Who are we?</h1>
+  <div class="page-hero">
+    <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=1600&q=80')"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <p class="section-eyebrow" style="color:var(--gold-lt)" data-en="The people behind the voice" data-fr="Les personnes derrière la voix">The people behind the voice</p>
+      <h1 data-en="Who We Are" data-fr="Qui Nous Sommes">Who We Are</h1>
+      <p data-en="A team of artists, educators, and practitioners united by a shared belief: that the voice has the power to transform." data-fr="Une équipe d'artistes, d'éducateurs et de praticiens unis par une conviction commune : la voix a le pouvoir de transformer.">A team of artists, educators, and practitioners united by a shared belief: that the voice has the power to transform.</p>
+    </div>
+  </div>
 
+  <!-- TEAM -->
+  <section class="content-section fade-in">
+    <p class="section-eyebrow" data-en="Our team" data-fr="Notre équipe">Our team</p>
+    <h2 class="section-title" data-en="The People" data-fr="Les Personnes">The People</h2>
     <div class="team-grid">
-        <div class="profile-card">
-            <img src="https://via.placeholder.com/150" alt="Imane" class="profile-img">
-            <div class="name">Imane El Baladi</div>
-            <div class="role">Artistic Director</div>
-            <p class="bio" data-en="Visionary lead and vocal coach with 10 years of experience in expressive arts." 
-                           data-fr="Directeur artistique visionnaire et coach vocal con 10 ans d'expérience dans les arts expressifs.">
-                Visionary lead and vocal coach with 10 years of experience in expressive arts.
-            </p>
+      <div class="profile-card">
+        <div class="profile-img-wrap">
+          <img src="images/imane.jpeg" alt="Imane El Baladi" loading="lazy">
         </div>
-
-        <div class="profile-card">
-            <img src="https://via.placeholder.com/150" alt="Emma" class="profile-img">
-            <div class="name">Emma Laurent</div>
-            <div class="role">Soprano & Teacher</div>
-            <p class="bio" data-en="Specialized in baroque repertoire and modern vocal techniques." 
-                           data-fr="Spécialisée nel répertoire baroque et les techniques vocales modernes.">
-                Specialized in baroque repertoire and modern vocal techniques.
-            </p>
+        <div class="profile-info">
+          <p class="profile-role" data-en="Artistic Director" data-fr="Directrice Artistique">Artistic Director</p>
+          <h3 class="profile-name">Imane El Baladi</h3>
+          <p class="profile-bio" data-en="Visionary vocal coach with 10 years of experience in expressive arts. Trained in classical and contemporary techniques." data-fr="Coach vocale visionnaire avec 10 ans d'expérience dans les arts expressifs. Formée aux techniques classiques et contemporaines.">Visionary vocal coach with 10 years of experience in expressive arts. Trained in classical and contemporary techniques.</p>
         </div>
-
-        <div class="profile-card">
-            <img src="https://via.placeholder.com/150" alt="Marco" class="profile-img">
-            <div class="name">Marco Rossi</div>
-            <div class="role">Pianist</div>
-            <p class="bio" data-en="Expert accompanist for opera singers and contemporary performers." 
-                           data-fr="Accompagnateur expert pour chanteurs d'opéra et interprètes contemporains.">
-                Expert accompanist for opera singers and contemporary performers.
-            </p>
+      </div>
+      <div class="profile-card">
+        <div class="profile-img-wrap">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80" alt="Emma Laurent" loading="lazy">
         </div>
-
-        <div class="profile-card">
-            <img src="https://via.placeholder.com/150" alt="Sophie" class="profile-img">
-            <div class="name">Sophie Dubois</div>
-            <div class="role">Voice Therapist</div>
-            <p class="bio" data-en="Focuses on vocal health and rehabilitation for professional speakers." 
-                           data-fr="Se concentre sulla santé vocale et la réhabilitation per i professionisti della parola.">
-                Focuses on vocal health and rehabilitation for professional speakers.
-            </p>
+        <div class="profile-info">
+          <p class="profile-role" data-en="Soprano & Teacher" data-fr="Soprano & Enseignante">Soprano & Teacher</p>
+          <h3 class="profile-name">Emma Laurent</h3>
+          <p class="profile-bio" data-en="Specialized in baroque repertoire and modern vocal techniques, Emma brings rigour and warmth to every lesson and performance." data-fr="Spécialisée dans le répertoire baroque et les techniques vocales modernes, Emma apporte rigueur et chaleur à chaque cours et performance.">Specialized in baroque repertoire and modern vocal techniques, Emma brings rigour and warmth to every lesson and performance.</p>
         </div>
-
-        <div class="profile-card">
-            <img src="https://via.placeholder.com/150" alt="Luca" class="profile-img">
-            <div class="name">Luca Bianchi</div>
-            <div class="role">Composer</div>
-            <p class="bio" data-en="Creates unique soundscapes for expressive vocal performances." 
-                           data-fr="Crée des paysages sonores uniques per des performances vocales expressives.">
-                Creates unique soundscapes for expressive vocal performances.
-            </p>
+      </div>
+      <div class="profile-card">
+        <div class="profile-img-wrap">
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80" alt="Marco Rossi" loading="lazy">
         </div>
-
-        <div class="profile-card">
-            <img src="images/davide.jpeg" alt="Davide" class="profile-img">
-            <div class="name">Davide Schiavone</div>
-            <div class="role">President of the Foundation</div>
-            <p class="bio" data-en="Leads the development of Expressive Singing." 
-                           data-fr="Dirige le développement d’Expressive Singing..">
-                Leads the development of Expressive Singing.
-            </p>
+        <div class="profile-info">
+          <p class="profile-role" data-en="Pianist & Accompanist" data-fr="Pianiste & Accompagnateur">Pianist & Accompanist</p>
+          <h3 class="profile-name">Marco Rossi</h3>
+          <p class="profile-bio" data-en="Expert accompanist for opera singers and contemporary performers. Marco's musicianship elevates every vocal moment." data-fr="Accompagnateur expert pour chanteurs d'opéra et interprètes contemporains. Le musicianship de Marco élève chaque moment vocal.">Expert accompanist for opera singers and contemporary performers. Marco's musicianship elevates every vocal moment.</p>
         </div>
+      </div>
+      <div class="profile-card">
+        <div class="profile-img-wrap">
+          <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=400&q=80" alt="Sophie Dubois" loading="lazy">
+        </div>
+        <div class="profile-info">
+          <p class="profile-role" data-en="Voice Therapist" data-fr="Thérapeute Vocale">Voice Therapist</p>
+          <h3 class="profile-name">Sophie Dubois</h3>
+          <p class="profile-bio" data-en="Focused on vocal health and rehabilitation for professional speakers and singers, Sophie is our guardian of sustainable voice use." data-fr="Focalisée sur la santé vocale et la réhabilitation, Sophie est notre gardienne d'une utilisation durable de la voix.">Focused on vocal health and rehabilitation for professional speakers and singers, Sophie is our guardian of sustainable voice use.</p>
+        </div>
+      </div>
+      <div class="profile-card">
+        <div class="profile-img-wrap">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80" alt="Luca Bianchi" loading="lazy">
+        </div>
+        <div class="profile-info">
+          <p class="profile-role" data-en="Composer" data-fr="Compositeur">Composer</p>
+          <h3 class="profile-name">Luca Bianchi</h3>
+          <p class="profile-bio" data-en="Creator of original soundscapes for our performances, Luca blends electronics, acoustic instruments and voice into new sonic worlds." data-fr="Créateur de paysages sonores originaux pour nos spectacles, Luca fusionne électronique, instruments acoustiques et voix en nouveaux mondes sonores.">Creator of original soundscapes for our performances, Luca blends electronics, acoustic instruments and voice into new sonic worlds.</p>
+        </div>
+      </div>
+      <div class="profile-card">
+        <div class="profile-img-wrap">
+          <img src="images/davide.jpeg" alt="Davide Schiavone" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80'" loading="lazy">
+        </div>
+        <div class="profile-info">
+          <p class="profile-role" data-en="President of the Foundation" data-fr="Président de la Fondation">President of the Foundation</p>
+          <h3 class="profile-name">Davide Schiavone</h3>
+          <p class="profile-bio" data-en="Leads the development of Expressive Singing, building bridges between artistic excellence and community impact." data-fr="Dirige le développement d'Expressive Singing, construisant des ponts entre l'excellence artistique et l'impact communautaire.">Leads the development of Expressive Singing, building bridges between artistic excellence and community impact.</p>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <script>
-        let currentLang = 'en';
-        function toggleLang() {
-            const btn = document.getElementById('langBtn');
-            const title = document.getElementById('title');
-            const backLink = document.getElementById('backLink');
-            const bios = document.querySelectorAll('.bio');
-            const roles = document.querySelectorAll('.role');
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <p class="footer-logo-text">Expressive Singing</p>
+        <p class="footer-tagline" data-en="Voice. Expression. Transformation." data-fr="Voix. Expression. Transformation.">Voice. Expression. Transformation.</p>
+      </div>
+      <div class="footer-links-group">
+        <p class="footer-group-title" data-en="Explore" data-fr="Explorer">Explore</p>
+        <a href="association.html" data-en="Association" data-fr="Association">Association</a>
+        <a href="company.html" data-en="Company" data-fr="Compagnie">Company</a>
+        <a href="classes.html" data-en="Classes" data-fr="Cours">Classes</a>
+        <a href="events.html" data-en="Events" data-fr="Événements">Events</a>
+      </div>
+      <div class="footer-links-group">
+        <p class="footer-group-title" data-en="Connect" data-fr="Se connecter">Connect</p>
+        <a href="retreats.html" data-en="Retreats" data-fr="Retraites">Retreats</a>
+        <a href="blog.html" data-en="Blog" data-fr="Blog">Blog</a>
+        <a href="contact.html" data-en="Contact" data-fr="Contact">Contact</a>
+      </div>
+      <div class="footer-social">
+        <p class="footer-group-title">Social</p>
+        <div class="footer-social-links">
+          <a href="https://www.instagram.com/expressivesingingassociation" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Expressive Singing · Geneva, Switzerland</p>
+      <p data-en="Crafted with ♥ for the voice" data-fr="Créé avec ♥ pour la voix">Crafted with ♥ for the voice</p>
+    </div>
+  </footer>
 
-            if (currentLang === 'en') {
-                title.innerText = "Qui sommes-nous ?";
-                backLink.innerText = "← Accueil";
-                btn.innerText = 'EN';
-                bios.forEach(b => b.innerText = b.getAttribute('data-fr'));
-                currentLang = 'fr';
-            } else {
-                title.innerText = "Who are we?";
-                backLink.innerText = "← Home";
-                btn.innerText = 'FR';
-                bios.forEach(b => b.innerText = b.getAttribute('data-en'));
-                currentLang = 'en';
-            }
-        }
-    </script>
+  <script src="main.js"></script>
 </body>
 </html>
