@@ -799,15 +799,18 @@ section { padding: clamp(60px, 10vw, 120px) clamp(20px, 5vw, 60px); }
 /* CLASSES GRID */
 .classes-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 28px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
   max-width: var(--max-w);
   margin: 0 auto;
+  align-items: stretch;
 }
 .class-card {
   background: var(--white);
   border-radius: var(--radius);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
   transition: transform var(--transition), box-shadow var(--transition);
 }
 .class-card:hover {
@@ -816,27 +819,37 @@ section { padding: clamp(60px, 10vw, 120px) clamp(20px, 5vw, 60px); }
 }
 .class-card-header {
   background: var(--forest);
-  padding: 32px 28px;
+  padding: 28px 26px;
   color: var(--white);
   position: relative;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
 }
 .class-card-icon { font-size: 2rem; margin-bottom: 12px; }
 .class-card-header h3 {
   font-family: var(--font-display);
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   color: var(--gold-lt);
 }
-.class-card-body { padding: 28px; }
+.class-card-body {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
 .class-card-body p { color: var(--muted); font-size: 0.95rem; margin-bottom: 20px; }
 .class-card-meta {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  margin-top: auto;
   margin-bottom: 24px;
   font-size: 0.82rem;
   color: var(--charcoal);
 }
 .class-card-meta span { display: flex; align-items: center; gap: 6px; }
+.class-card-body .btn { align-self: flex-start; }
 
 /* EVENTS */
 .events-list {
@@ -1049,6 +1062,10 @@ section { padding: clamp(60px, 10vw, 120px) clamp(20px, 5vw, 60px); }
 /* ============================================================
    RESPONSIVE
    ============================================================ */
+@media (max-width: 1040px) {
+  .classes-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
 @media (max-width: 900px) {
   .entities-grid { grid-template-columns: 1fr; }
   .two-col { grid-template-columns: 1fr; gap: 40px; }
@@ -1085,4 +1102,5 @@ section { padding: clamp(60px, 10vw, 120px) clamp(20px, 5vw, 60px); }
   .footer-inner { grid-template-columns: 1fr; gap: 32px; }
   .hero-ctas { flex-direction: column; align-items: center; }
   .family-collage { column-count: 2; }
+  .classes-grid { grid-template-columns: 1fr; }
 }
