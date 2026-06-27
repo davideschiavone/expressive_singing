@@ -1056,21 +1056,14 @@ section { padding: clamp(60px, 10vw, 120px) clamp(20px, 5vw, 60px); }
   background: var(--white);
   border-radius: var(--radius);
   padding: 24px 26px;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: auto 1fr auto;
-  grid-template-areas:
-    "date date"
-    "info info"
-    "price book";
-  align-items: center;
-  gap: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
   transition: transform var(--transition), box-shadow var(--transition);
 }
 .event-item:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
 .event-date {
-  grid-area: date;
-  justify-self: start;
+  align-self: flex-start;
   display: inline-flex;
   align-items: baseline;
   gap: 8px;
@@ -1082,17 +1075,27 @@ section { padding: clamp(60px, 10vw, 120px) clamp(20px, 5vw, 60px); }
 }
 .event-date .day { font-size: 1.5rem; font-weight: 700; line-height: 1; }
 .event-date .month { font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase; color: var(--gold-lt); }
-.event-info { grid-area: info; }
+.event-info { display: flex; flex-direction: column; gap: 6px; }
 .event-info h3 {
   font-family: var(--font-display);
   font-size: 1.2rem;
   color: var(--forest);
-  margin-bottom: 6px;
+  min-height: 2.6em;
 }
-.event-price { grid-area: price; align-self: center; }
-.event-item > .btn { grid-area: book; justify-self: end; }
 .event-info p { font-size: 0.9rem; color: var(--muted); }
-.event-price { font-weight: 700; color: var(--forest); font-size: 1.1rem; white-space: nowrap; }
+.event-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding-top: 4px;
+}
+.event-price { font-weight: 700; color: var(--forest); font-size: 1.05rem; }
+.event-status { font-size: 0.85rem; color: var(--muted); }
+.event-link { font-size: 0.85rem; color: var(--gold); font-weight: 600; white-space: nowrap; }
+.event-link:hover { color: var(--forest); }
 
 /* BLOG */
 .blog-grid {
