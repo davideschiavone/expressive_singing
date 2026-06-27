@@ -12,7 +12,7 @@ function applyLang(lang) {
 
   // Update button label
   const btn = document.getElementById('langBtn');
-  if (btn) btn.textContent = lang === 'en' ? 'FR' : 'EN';
+  if (btn) btn.textContent = lang === 'en' ? 'EN' : 'FR';
 
   // Update all elements that carry data-en / data-fr translations
   document.querySelectorAll('[data-en]').forEach(el => {
