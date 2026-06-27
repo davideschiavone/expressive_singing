@@ -839,6 +839,28 @@ section { padding: clamp(60px, 10vw, 120px) clamp(20px, 5vw, 60px); }
 }
 .membership-card li::before { content: '✓  '; color: var(--forest); font-weight: 700; }
 
+/* TWINT PAYMENT */
+.twint-pay { text-align: center; margin-top: 56px; }
+.twint-pay-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--gold-lt);
+  margin-bottom: 8px;
+}
+.twint-pay-text {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+.twint-qr {
+  width: 220px;
+  height: auto;
+  background: #fff;
+  padding: 16px;
+  border-radius: 14px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.18);
+}
+
 /* CLASSES GRID */
 .classes-grid {
   display: grid;
