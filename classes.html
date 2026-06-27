@@ -109,9 +109,9 @@
           <div class="class-card-meta">
             <span>60 min</span>
             <span><span data-en="All levels" data-fr="Tous niveaux">All levels</span></span>
-            <span>CHF 60</span>
+            <span>CHF 70</span>
           </div>
-          <a href="#book" class="btn btn-primary" data-en="Book Now" data-fr="Réserver">Book Now</a>
+          <a href="#book" class="btn btn-primary" data-en="Book &amp; Pay" data-fr="Réserver &amp; Payer">Book &amp; Pay</a>
         </div>
       </div>
 
@@ -126,13 +126,16 @@
           <p data-en="Together we work on vocal technique, singing therapy, body expression and the basics of theatre — building towards the preparation of shows and events." data-fr="Ensemble, nous travaillons la technique vocale, la chant-thérapie, l'expression corporelle et les bases du théâtre — en vue de la préparation de spectacles et d'événements.">
             Together we work on vocal technique, singing therapy, body expression and the basics of theatre — building towards the preparation of shows and events.
           </p>
+          <p data-en="Booking covers a block of 4 consecutive Mondays, starting from the first Monday you choose. Missed sessions cannot be recovered." data-fr="La réservation couvre un bloc de 4 lundis consécutifs, à partir du premier lundi que vous choisissez. Les séances manquées ne peuvent pas être rattrapées.">
+            Booking covers a block of 4 consecutive Mondays, starting from the first Monday you choose. Missed sessions cannot be recovered.
+          </p>
           <div class="class-card-meta">
             <span>1h30</span>
             <span><span data-en="Mondays at 20:30" data-fr="Lundis à 20h30">Mondays at 20:30</span></span>
             <span><span data-en="Shanti Club – Rue des Grottes 28, 1201 Geneva" data-fr="Shanti Club – Rue des Grottes 28, 1201 Genève">Shanti Club – Rue des Grottes 28, 1201 Geneva</span></span>
-            <span><span data-en="CHF 180 / month" data-fr="CHF 180 / mois">CHF 180 / month</span></span>
+            <span><span data-en="CHF 190 / 4 Mondays" data-fr="CHF 190 / 4 lundis">CHF 190 / 4 Mondays</span></span>
           </div>
-          <a href="#book" class="btn btn-primary" data-en="Book Now" data-fr="Réserver">Book Now</a>
+          <a href="#" data-book="group" class="btn btn-primary" data-en="Book &amp; Pay" data-fr="Réserver &amp; Payer">Book &amp; Pay</a>
         </div>
       </div>
 
@@ -164,9 +167,9 @@
           <div class="class-card-meta">
             <span><span data-en="Wednesdays · 18:30–20:00" data-fr="Mercredis · 18h30–20h">Wednesdays · 18:30–20:00</span></span>
             <span><span data-en="La Maison Verte · from Sept 2026" data-fr="La Maison Verte · dès sept. 2026">La Maison Verte · from Sept 2026</span></span>
-            <span><span data-en="CHF 250 / 10 sessions" data-fr="CHF 250 / 10 séances">CHF 250 / 10 sessions</span></span>
+            <span><span data-en="CHF 260 / 10 sessions" data-fr="CHF 260 / 10 séances">CHF 260 / 10 sessions</span></span>
           </div>
-          <a href="#book" class="btn btn-primary" data-en="Join the Choir" data-fr="Rejoindre le Chœur">Join the Choir</a>
+          <a href="#" data-book="choir" class="btn btn-primary" data-en="Join &amp; Pay" data-fr="Rejoindre &amp; Payer">Join &amp; Pay</a>
         </div>
       </div>
 
@@ -176,10 +179,10 @@
   <!-- BOOKING -->
   <section id="book" class="content-section fade-in">
     <div style="max-width:700px; margin:0 auto 40px; text-align:center;">
-      <p class="section-eyebrow" data-en="Book online" data-fr="Réserver en ligne">Book online</p>
-      <h2 class="section-title" data-en="Pick Your Time" data-fr="Choisissez Votre Créneau">Pick Your Time</h2>
-      <p style="color:var(--muted);" data-en="Choose a slot, pay securely online and receive an instant confirmation by email." data-fr="Choisissez un créneau, payez en ligne en toute sécurité et recevez une confirmation instantanée par email.">
-        Choose a slot, pay securely online and receive an instant confirmation by email.
+      <p class="section-eyebrow" data-en="Private sessions" data-fr="Séances privées">Private sessions</p>
+      <h2 class="section-title" data-en="Book a Private Session" data-fr="Réserver une Séance Privée">Book a Private Session</h2>
+      <p style="color:var(--muted);" data-en="Choose a slot and pay securely online (TWINT or card). You'll receive an instant confirmation by email." data-fr="Choisissez un créneau et payez en ligne en toute sécurité (TWINT ou carte). Vous recevrez une confirmation instantanée par email.">
+        Choose a slot and pay securely online (TWINT or card). You'll receive an instant confirmation by email.
       </p>
     </div>
     <!-- Calendly inline widget -->
@@ -225,5 +228,33 @@
 
   <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
   <script src="main.js"></script>
+
+  <!--
+    ============================================================
+    BOOKING / PAYMENT LINKS
+    ============================================================
+    Paste the Stripe Payment Link URL for each product between the quotes.
+    Until a URL is set, the button falls back to the contact page.
+    (Private sessions are booked + paid via the Calendly widget above,
+     so they are not listed here.)
+    ============================================================
+  -->
+  <script>
+    window.BOOKING_LINKS = {
+      group:    "",   // Stripe Payment Link — Group class, CHF 190 / 4 Mondays (one-time)
+      choir:    "",   // Stripe Payment Link — Choir, CHF 260 / 10 sessions (one-time)
+      workshop: ""    // Stripe Payment Link — Workshop (set once priced)
+    };
+    document.querySelectorAll('[data-book]').forEach(function (a) {
+      var url = (window.BOOKING_LINKS || {})[a.getAttribute('data-book')];
+      if (url) {
+        a.href = url;
+        a.target = '_blank';
+        a.rel = 'noopener';
+      } else {
+        a.href = 'contact.html'; // fallback until the payment link is added
+      }
+    });
+  </script>
 </body>
 </html>
