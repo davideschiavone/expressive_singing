@@ -672,7 +672,7 @@ section { padding: clamp(60px, 10vw, 120px) clamp(20px, 5vw, 60px); }
 .who-we-are-text {
   max-width: 760px;
   margin: 0 auto 48px;
-  text-align: center;
+  text-align: left;
 }
 .who-we-are-text p {
   color: var(--muted);
