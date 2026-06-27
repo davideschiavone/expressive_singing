@@ -848,8 +848,38 @@ section { padding: clamp(60px, 10vw, 120px) clamp(20px, 5vw, 60px); }
 }
 .membership-card li::before { content: '✓  '; color: var(--forest); font-weight: 700; }
 
+/* FREE DONATION */
+.donation-callout {
+  max-width: 660px;
+  margin: 52px auto 0;
+  text-align: center;
+  padding: 34px 30px;
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.04);
+}
+.donation-callout-eyebrow {
+  font-size: 0.72rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold-lt);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.donation-callout-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+.donation-callout-text {
+  color: rgba(255,255,255,0.72);
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
 /* PAYMENT METHODS */
-.payment-methods { margin-top: 64px; }
+.payment-methods { margin-top: 52px; }
 .payment-methods-title {
   font-family: var(--font-display);
   font-size: 1.6rem;
