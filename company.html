@@ -159,31 +159,27 @@
 
     <!--
       ============================================================
-      INSTAGRAM FEED — how to show your latest posts here
+      INSTAGRAM FEED (LightWidget — auto-updating latest posts)
       ============================================================
-      The grid below is a placeholder (links to the profile) shown until a
-      live feed is connected. Pick ONE of the two options:
+      ONE-TIME SETUP to go live:
+        1. Go to https://lightwidget.com and sign in.
+        2. "Create new widget" -> source: Instagram username
+           "expressivesingingassociation" (public profile).
+        3. Layout: grid, 1 row x 4 columns (shows the 4 most recent posts).
+        4. Save. Copy the widget ID — it's the code in the embed URL,
+           e.g. in  https://lightwidget.com/widgets/abc123def456.html
+           the ID is  abc123def456
+        5. Paste that ID into IG_LIGHTWIDGET_ID just below.
 
-      OPTION A — Auto-updating "latest posts" feed (recommended):
-        Free, no-code widget services such as LightWidget, SnapWidget, Behold
-        or Elfsight. Create a widget once for @expressivesingingassociation,
-        choose 4 posts, then DELETE the placeholder .ig-feed div below and
-        paste the widget's iframe here, e.g.:
-          <iframe src="https://lightwidget.com/widgets/REPLACE_WITH_ID.html"
-                  class="lightwidget-widget" scrolling="no"
-                  style="width:100%;border:0;overflow:hidden;"></iframe>
-        (and add the matching <script> the service gives you).
-
-      OPTION B — Hand-pick specific posts (official Instagram embed, free):
-        Replace each placeholder tile with an official blockquote from
-        instagram.com -> a post -> "..." -> Embed. The embed.js script is
-        already loaded at the bottom of this page, so the blockquotes render
-        automatically. Example for one post:
-          <blockquote class="instagram-media"
-            data-instgrm-permalink="https://www.instagram.com/p/POST_ID/"
-            data-instgrm-version="14"></blockquote>
+      That's it. While the ID is empty, the placeholder grid is shown.
+      As soon as the ID is set, the live auto-updating feed replaces it
+      (no other code changes needed; it updates itself as you post).
       ============================================================
     -->
+    <script>
+      // Paste your LightWidget widget ID here to activate the live feed:
+      window.IG_LIGHTWIDGET_ID = "";
+    </script>
     <div class="ig-feed" id="igFeed">
       <a class="ig-tile" href="https://www.instagram.com/expressivesingingassociation/" target="_blank" rel="noopener" aria-label="Expressive Singing on Instagram">
         <img src="logo.png" alt="Expressive Singing on Instagram" loading="lazy">
@@ -243,7 +239,23 @@
   </footer>
 
   <script src="main.js"></script>
-  <!-- Instagram embed script — renders any official .instagram-media blockquotes (Option B above) -->
-  <script async src="https://www.instagram.com/embed.js"></script>
+  <!-- LightWidget loader: if a widget ID is set, replace the placeholder grid with the live feed -->
+  <script>
+    (function () {
+      var id = window.IG_LIGHTWIDGET_ID;
+      var feed = document.getElementById('igFeed');
+      if (!id || !feed) return; // no ID yet -> keep the placeholder grid
+      var iframe = document.createElement('iframe');
+      iframe.src = 'https://lightwidget.com/widgets/' + id + '.html';
+      iframe.scrolling = 'no';
+      iframe.className = 'lightwidget-widget';
+      iframe.setAttribute('allowtransparency', 'true');
+      iframe.style.cssText = 'width:100%;max-width:920px;margin:0 auto;display:block;border:0;overflow:hidden;';
+      feed.replaceWith(iframe);
+      var s = document.createElement('script');
+      s.src = 'https://cdn.lightwidget.com/widgets/lightwidget.js';
+      document.body.appendChild(s);
+    })();
+  </script>
 </body>
 </html>
