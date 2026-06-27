@@ -954,7 +954,7 @@ section { padding: clamp(60px, 10vw, 120px) clamp(20px, 5vw, 60px); }
   background: var(--forest);
   padding: 26px 26px;
   color: var(--white);
-  min-height: 156px;
+  min-height: 176px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
