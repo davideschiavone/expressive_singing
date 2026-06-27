@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking confirmed | Expressive Singing</title>
+  <meta name="robots" content="noindex">
+  <meta property="og:title" content="Booking confirmed | Expressive Singing">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=2">
+  <script>
+    (function() {
+      var lang = localStorage.getItem('lang') || 'en';
+      document.documentElement.lang = lang;
+      document.documentElement.setAttribute('data-lang', lang);
+    })();
+  </script>
+</head>
+<body>
+
+  <nav class="nav" id="mainNav">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.svg" alt="Expressive Singing" onerror="this.onerror=null; this.src='logo.png'; this.onerror=function(){this.onerror=null; this.src='logo.jpeg'; this.onerror=function(){this.style.display='none'; this.nextSibling.style.display='block';};};">
+      <span class="nav-logo-text" style="display:none">Expressive Singing</span>
+    </a>
+    <button class="nav-hamburger" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="navLinks">
+      <a href="association.html" class="nav-link" data-en="Association" data-fr="Association">Association</a>
+      <a href="company.html" class="nav-link" data-en="Company" data-fr="Compagnie">Company</a>
+      <a href="classes.html" class="nav-link" data-en="Classes" data-fr="Cours">Classes</a>
+      <a href="events.html" class="nav-link" data-en="Events" data-fr="Événements">Events</a>
+      <a href="retreats.html" class="nav-link" data-en="Retreats" data-fr="Retraites">Retreats</a>
+      <a href="blog.html" class="nav-link" data-en="Blog" data-fr="Blog">Blog</a>
+      <a href="contact.html" class="nav-link" data-en="Contact" data-fr="Contact">Contact</a>
+      <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
+    </div>
+  </nav>
+
+  <section class="content-section fade-in" style="min-height:70vh; display:flex; align-items:center;">
+    <div style="max-width:620px; margin:0 auto; text-align:center;">
+      <p class="section-eyebrow" data-en="Payment received" data-fr="Paiement reçu">Payment received</p>
+      <h1 style="font-family:var(--font-display); font-size:clamp(2rem,5vw,3rem); color:var(--forest); margin-bottom:20px;" data-en="You're booked — thank you!" data-fr="C'est réservé — merci !">You're booked — thank you!</h1>
+      <p style="color:var(--muted); font-size:1.05rem; line-height:1.8; margin-bottom:16px;" data-en="Your payment has been confirmed and your place is reserved. A confirmation email is on its way, and we've added you to our calendar." data-fr="Votre paiement a été confirmé et votre place est réservée. Un email de confirmation est en route, et nous vous avons ajouté·e à notre calendrier.">
+        Your payment has been confirmed and your place is reserved. A confirmation email is on its way, and we've added you to our calendar.
+      </p>
+      <p style="color:var(--muted); font-size:0.95rem; line-height:1.8; margin-bottom:36px;" data-en="If you have any questions, just reach out — we'd love to hear from you." data-fr="Pour toute question, n'hésitez pas à nous écrire — nous serions ravis de vous lire.">
+        If you have any questions, just reach out — we'd love to hear from you.
+      </p>
+      <div class="hero-ctas" style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+        <a href="index.html" class="btn btn-primary" data-en="Back to home" data-fr="Retour à l'accueil">Back to home</a>
+        <a href="contact.html" class="btn btn-outline" data-en="Contact us" data-fr="Nous contacter">Contact us</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <p class="footer-logo-text">Expressive Singing</p>
+        <p class="footer-tagline" data-en="Voice. Expression. Transformation." data-fr="Voix. Expression. Transformation.">Voice. Expression. Transformation.</p>
+      </div>
+      <div class="footer-links-group">
+        <p class="footer-group-title" data-en="Explore" data-fr="Explorer">Explore</p>
+        <a href="association.html" data-en="About the Association" data-fr="À propos de l'Association">About the Association</a>
+        <a href="company.html" data-en="Meet the Company" data-fr="Découvrir la Compagnie">Meet the Company</a>
+        <a href="association.html#statutes" data-en="Statutes" data-fr="Statuts">Statutes</a>
+        <a href="contact.html" data-en="Partnerships" data-fr="Partenariats">Partnerships</a>
+      </div>
+      <div class="footer-links-group">
+        <p class="footer-group-title" data-en="Connect" data-fr="Se connecter">Connect</p>
+        <a href="association.html#membership" data-en="Become a Member" data-fr="Devenir Membre">Become a Member</a>
+        <a href="classes.html" data-en="Classes" data-fr="Cours">Classes</a>
+        <a href="events.html" data-en="Events & Retreats" data-fr="Événements & Retraites">Events & Retreats</a>
+        <a href="contact.html" data-en="Contact" data-fr="Contact">Contact</a>
+      </div>
+      <div class="footer-social">
+        <p class="footer-group-title">Social</p>
+        <div class="footer-social-links">
+          <a href="https://www.instagram.com/expressivesingingassociation" target="_blank" rel="noopener">Instagram</a>
+          <a href="blog.html" data-en="Blog" data-fr="Blog">Blog</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Expressive Singing · Geneva, Switzerland</p>
+      <p data-en="Crafted with care for the voice" data-fr="Créé avec soin pour la voix">Crafted with care for the voice</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
