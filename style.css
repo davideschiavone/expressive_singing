@@ -804,8 +804,11 @@ section { padding: clamp(60px, 10vw, 120px) clamp(20px, 5vw, 60px); }
   text-align: center;
   border: 2px solid transparent;
   transition: all var(--transition);
+  display: flex;
+  flex-direction: column;
 }
 .membership-card.featured { border-color: var(--gold); }
+.membership-card .btn { margin-top: auto; align-self: center; }
 .membership-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 20px 50px rgba(0,0,0,0.08);
