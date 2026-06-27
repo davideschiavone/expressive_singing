@@ -152,16 +152,59 @@
   </section>
 
   <!-- GALLERY TEASER -->
+  <!-- INSTAGRAM FEED -->
   <section class="content-section content-section--alt fade-in">
-    <p class="section-eyebrow" data-en="Visual archive" data-fr="Archive visuelle">Visual archive</p>
-    <h2 class="section-title" data-en="Gallery" data-fr="Galerie">Gallery</h2>
-    <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:12px; max-width:900px; margin:0 auto;">
-      <img src="https://images.unsplash.com/photo-1501386761578-eaa54b7a655f?w=400&q=80" style="border-radius:8px; aspect-ratio:1; object-fit:cover;" alt="Gallery 1" loading="lazy">
-      <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=400&q=80" style="border-radius:8px; aspect-ratio:1; object-fit:cover;" alt="Gallery 2" loading="lazy">
-      <img src="https://images.unsplash.com/photo-1478737270197-b91c38a5d1d4?w=400&q=80" style="border-radius:8px; aspect-ratio:1; object-fit:cover;" alt="Gallery 3" loading="lazy">
-      <img src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?w=400&q=80" style="border-radius:8px; aspect-ratio:1; object-fit:cover;" alt="Gallery 4" loading="lazy">
-      <img src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=400&q=80" style="border-radius:8px; aspect-ratio:1; object-fit:cover;" alt="Gallery 5" loading="lazy">
-      <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&q=80" style="border-radius:8px; aspect-ratio:1; object-fit:cover;" alt="Gallery 6" loading="lazy">
+    <p class="section-eyebrow" data-en="Follow our journey" data-fr="Suivez notre parcours">Follow our journey</p>
+    <h2 class="section-title" data-en="On Instagram" data-fr="Sur Instagram">On Instagram</h2>
+
+    <!--
+      ============================================================
+      INSTAGRAM FEED — how to show your latest posts here
+      ============================================================
+      The grid below is a placeholder (links to the profile) shown until a
+      live feed is connected. Pick ONE of the two options:
+
+      OPTION A — Auto-updating "latest posts" feed (recommended):
+        Free, no-code widget services such as LightWidget, SnapWidget, Behold
+        or Elfsight. Create a widget once for @expressivesingingassociation,
+        choose 4 posts, then DELETE the placeholder .ig-feed div below and
+        paste the widget's iframe here, e.g.:
+          <iframe src="https://lightwidget.com/widgets/REPLACE_WITH_ID.html"
+                  class="lightwidget-widget" scrolling="no"
+                  style="width:100%;border:0;overflow:hidden;"></iframe>
+        (and add the matching <script> the service gives you).
+
+      OPTION B — Hand-pick specific posts (official Instagram embed, free):
+        Replace each placeholder tile with an official blockquote from
+        instagram.com -> a post -> "..." -> Embed. The embed.js script is
+        already loaded at the bottom of this page, so the blockquotes render
+        automatically. Example for one post:
+          <blockquote class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/p/POST_ID/"
+            data-instgrm-version="14"></blockquote>
+      ============================================================
+    -->
+    <div class="ig-feed" id="igFeed">
+      <a class="ig-tile" href="https://www.instagram.com/expressivesingingassociation/" target="_blank" rel="noopener" aria-label="Expressive Singing on Instagram">
+        <img src="logo.png" alt="Expressive Singing on Instagram" loading="lazy">
+        <span class="ig-tile-overlay">@expressivesingingassociation</span>
+      </a>
+      <a class="ig-tile" href="https://www.instagram.com/expressivesingingassociation/" target="_blank" rel="noopener" aria-label="Expressive Singing on Instagram">
+        <img src="logo.png" alt="Expressive Singing on Instagram" loading="lazy">
+        <span class="ig-tile-overlay">@expressivesingingassociation</span>
+      </a>
+      <a class="ig-tile" href="https://www.instagram.com/expressivesingingassociation/" target="_blank" rel="noopener" aria-label="Expressive Singing on Instagram">
+        <img src="logo.png" alt="Expressive Singing on Instagram" loading="lazy">
+        <span class="ig-tile-overlay">@expressivesingingassociation</span>
+      </a>
+      <a class="ig-tile" href="https://www.instagram.com/expressivesingingassociation/" target="_blank" rel="noopener" aria-label="Expressive Singing on Instagram">
+        <img src="logo.png" alt="Expressive Singing on Instagram" loading="lazy">
+        <span class="ig-tile-overlay">@expressivesingingassociation</span>
+      </a>
+    </div>
+
+    <div style="text-align:center; margin-top:32px;">
+      <a href="https://www.instagram.com/expressivesingingassociation/" target="_blank" rel="noopener" class="btn btn-primary" data-en="Follow on Instagram" data-fr="Suivre sur Instagram">Follow on Instagram</a>
     </div>
   </section>
 
@@ -200,5 +243,7 @@
   </footer>
 
   <script src="main.js"></script>
+  <!-- Instagram embed script — renders any official .instagram-media blockquotes (Option B above) -->
+  <script async src="https://www.instagram.com/embed.js"></script>
 </body>
 </html>

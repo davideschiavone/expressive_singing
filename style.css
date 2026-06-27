@@ -711,6 +711,46 @@ section { padding: clamp(60px, 10vw, 120px) clamp(20px, 5vw, 60px); }
   max-width: var(--max-w);
   margin: 0 auto;
 }
+
+/* INSTAGRAM FEED */
+.ig-feed {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  max-width: 920px;
+  margin: 0 auto;
+}
+.ig-tile {
+  position: relative;
+  display: block;
+  aspect-ratio: 1;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--white);
+}
+.ig-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition);
+}
+.ig-tile:hover img { transform: scale(1.05); }
+.ig-tile-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 12px;
+  font-size: 0.78rem;
+  color: var(--white);
+  background: linear-gradient(to top, rgba(0,0,0,0.55), rgba(0,0,0,0) 55%);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+.ig-tile:hover .ig-tile-overlay { opacity: 1; }
+@media (max-width: 680px) {
+  .ig-feed { grid-template-columns: repeat(2, 1fr); }
+}
 .profile-card {
   background: var(--white);
   border-radius: var(--radius);
