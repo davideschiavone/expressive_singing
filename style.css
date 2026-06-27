@@ -952,12 +952,12 @@ section { padding: clamp(60px, 10vw, 120px) clamp(20px, 5vw, 60px); }
 }
 .class-card-header {
   background: var(--forest);
-  padding: 24px 26px;
+  padding: 26px 26px;
   color: var(--white);
-  min-height: 152px;
+  min-height: 156px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 8px;
 }
 .class-card-header h3 {
@@ -993,9 +993,8 @@ section { padding: clamp(60px, 10vw, 120px) clamp(20px, 5vw, 60px); }
   margin-top: auto;
   margin-bottom: 20px;
   display: flex;
-  align-items: baseline;
-  gap: 8px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 4px;
 }
 .class-price-amount {
   font-family: var(--font-display);
@@ -1004,7 +1003,7 @@ section { padding: clamp(60px, 10vw, 120px) clamp(20px, 5vw, 60px); }
   color: var(--gold);
   line-height: 1;
 }
-.class-price-sub { font-size: 0.9rem; color: var(--muted); }
+.class-price-sub { font-size: 0.9rem; color: var(--muted); min-height: 1.2em; }
 .class-card-body .btn { width: 100%; }
 
 /* EVENTS */
