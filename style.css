@@ -1004,7 +1004,15 @@ section { padding: clamp(60px, 10vw, 120px) clamp(20px, 5vw, 60px); }
   line-height: 1;
 }
 .class-price-sub { font-size: 0.9rem; color: var(--muted); min-height: 1.2em; }
-.class-card-body .btn { width: 100%; }
+.class-card-body .btn {
+  width: 100%;
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.2;
+}
 
 /* EVENTS */
 .events-list {
