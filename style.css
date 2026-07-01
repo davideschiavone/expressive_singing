@@ -1096,6 +1096,7 @@ section { padding: clamp(60px, 10vw, 120px) clamp(20px, 5vw, 60px); }
 .event-status { font-size: 0.85rem; color: var(--muted); }
 .event-link { font-size: 0.85rem; color: var(--gold); font-weight: 600; white-space: nowrap; }
 .event-link:hover { color: var(--forest); }
+.event-buy-btn { padding: 8px 20px; font-size: 0.82rem; min-height: 0; letter-spacing: 0.06em; }
 
 /* BLOG */
 .blog-grid {
