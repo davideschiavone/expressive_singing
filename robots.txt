@@ -1,0 +1,14 @@
+# Robots.txt for Expressive Singing
+# https://expressivesinging.ch
+
+User-agent: *
+Allow: /
+
+# Disallow thank you / success pages
+Disallow: /booking-success.html
+
+# Sitemap location
+Sitemap: https://expressivesinging.ch/sitemap.xml
+
+# Host
+Host: https://expressivesinging.ch
