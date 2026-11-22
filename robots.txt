@@ -1,14 +1,9 @@
-# Robots.txt for Expressive Singing
-# https://expressivesinging.ch
+# robots.txt — https://expressivesinging.ch
+# Everything is crawlable. Pages that must stay out of search results
+# (booking-success.html, booking.html) carry <meta name="robots" content="noindex">,
+# which crawlers can only see if the page is NOT disallowed here.
 
 User-agent: *
 Allow: /
 
-# Disallow thank you / success pages
-Disallow: /booking-success.html
-
-# Sitemap location
 Sitemap: https://expressivesinging.ch/sitemap.xml
-
-# Host
-Host: https://expressivesinging.ch
