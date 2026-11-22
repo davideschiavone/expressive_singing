@@ -1402,3 +1402,58 @@ section { padding: clamp(60px, 10vw, 120px) clamp(20px, 5vw, 60px); }
 .image-credit { font-size: 0.8rem; color: var(--muted); margin-top: 10px; }
 .event-facts { margin: 28px 0 0; }
 .event-facts .fact-v { max-width: 70%; }
+
+/* PAST EVENTS */
+.past-feature {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 16px 40px;
+  align-items: start;
+  margin-bottom: 48px;
+}
+.past-feature-text { display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
+.past-feature-text h3 { font-family: var(--font-display); font-size: 1.8rem; color: var(--forest); line-height: 1.2; }
+.past-feature-text p { color: var(--muted); line-height: 1.7; }
+.past-feature-venue { font-size: 0.9rem; }
+.past-gallery { column-count: 3; column-gap: 12px; }
+.past-gallery a { display: block; margin-bottom: 12px; break-inside: avoid; border-radius: 10px; overflow: hidden; }
+.past-gallery img { width: 100%; transition: transform var(--transition); }
+.past-gallery a:hover img { transform: scale(1.03); }
+.past-feature .image-credit { grid-column: 2; margin-top: -8px; }
+.past-list .event-item { background: var(--cream); }
+.event-item--past .event-date { background: var(--muted); }
+.event-item--past .event-date .month { color: var(--cream); }
+@media (max-width: 900px) {
+  .past-feature { grid-template-columns: 1fr; }
+  .past-feature .image-credit { grid-column: auto; }
+  .past-gallery { column-count: 2; }
+}
+
+/* REVIEWS */
+.section-lead--left { text-align: left; margin-left: 0; }
+.review-sources {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+.review-source {
+  background: var(--white);
+  border-radius: var(--radius);
+  border-top: 3px solid var(--gold);
+  padding: 30px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.review-source-label {
+  font-size: 0.75rem;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+}
+.review-source h3 { font-family: var(--font-display); font-size: 1.5rem; color: var(--forest); }
+.review-source p:not(.review-source-label) { color: var(--muted); line-height: 1.7; }
+.review-source .btn { margin-top: auto; align-self: flex-start; min-height: 52px; display: inline-flex; align-items: center; }
+@media (max-width: 680px) { .review-sources { grid-template-columns: 1fr; } }
