@@ -114,6 +114,20 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://expressivesinging.ch/events.html"/>
   </url>
   <url>
+    <loc>https://expressivesinging.ch/gala-de-noel.html</loc>
+    <lastmod>2026-11-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://expressivesinging.ch/gala-de-noel.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://expressivesinging.ch/en/gala-de-noel.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://expressivesinging.ch/gala-de-noel.html"/>
+  </url>
+  <url>
+    <loc>https://expressivesinging.ch/en/gala-de-noel.html</loc>
+    <lastmod>2026-11-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://expressivesinging.ch/gala-de-noel.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://expressivesinging.ch/en/gala-de-noel.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://expressivesinging.ch/gala-de-noel.html"/>
+  </url>
+  <url>
     <loc>https://expressivesinging.ch/retreats.html</loc>
     <lastmod>2026-11-22</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://expressivesinging.ch/retreats.html"/>

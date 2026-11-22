@@ -1397,3 +1397,8 @@ section { padding: clamp(60px, 10vw, 120px) clamp(20px, 5vw, 60px); }
   .family-collage { column-count: 2; }
   .classes-grid { grid-template-columns: 1fr; }
 }
+
+/* EVENT PAGE */
+.image-credit { font-size: 0.8rem; color: var(--muted); margin-top: 10px; }
+.event-facts { margin: 28px 0 0; }
+.event-facts .fact-v { max-width: 70%; }
